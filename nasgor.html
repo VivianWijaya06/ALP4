@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nasi Goreng Sederhana - CookEasy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-[#fff9f7] text-gray-800">
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="flex-shrink-0">
+        <h1 class="text-2xl font-bold text-[#803f22] tracking-wide">
+          🍴 Cook<span class="text-orange-500">Easy</span>
+        </h1>
+      </div>
+
+      <div class="hidden md:flex flex-grow justify-center space-x-6 items-center text-sm font-medium text-[#803f22]">
+        <a href="index.html" class="hover:text-orange-500 transition-all duration-300 active:scale-95">Homepage</a>
+        <a href="recipe.html" class="text-orange-500 font-semibold border-b-2 border-orange-500 active:scale-95">Recipe</a>
+        <a href="guide.html" class="hover:text-orange-500 transition-all duration-300 active:scale-95">Basic Guide</a>
+        <a href="saved.html" class="hover:text-orange-500 transition-all duration-300 active:scale-95">Saved</a>
+      </div>
+
+      <div class="flex-shrink-0">
+        <a href="signin.html" class="bg-[#803f22] text-white px-4 py-1 rounded hover:bg-[#5c2c14] transition-all duration-300 active:scale-95">
+          Login
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container mx-auto px-4 py-10 max-w-4xl">
+    <div class="bg-white rounded shadow p-6 relative">
+      <img src="nasgor.jpeg" alt="Nasi Goreng" class="rounded mb-6 w-full object-cover h-64"/>
+      
+      <div class="absolute top-4 right-4 flex gap-3">
+        <button onclick="toggleLike()" id="likeBtn" class="bg-white border rounded-full p-2 shadow hover:bg-red-100">
+          ❤️
+        </button>
+        <button onclick="toggleSave()" id="saveBtn" class="bg-white border rounded-full p-2 shadow hover:bg-green-100">
+          💾
+        </button>
+      </div>
+
+      <h2 class="text-3xl font-bold text-[#803f22] mb-2">Nasi Goreng Sederhana</h2>
+      <div class="flex gap-6 text-sm text-gray-600 mb-6">
+        <span>⏱️ 15 menit</span>
+        <span>⭐ Mudah</span>
+        <span>🍽️ 1-2 Porsi</span>
+      </div>
+
+      <h3 class="text-xl font-semibold text-[#803f22] mb-2">Bahan-bahan:</h3>
+      <ul class="list-disc list-inside text-gray-700 mb-6">
+        <li>2 piring nasi putih</li>
+        <li>2 butir telur</li>
+        <li>2 siung bawang putih, cincang halus</li>
+        <li>2 sdm kecap manis</li>
+        <li>1/2 sdt garam</li>
+        <li>1 sdm minyak goreng</li>
+        <li>Opsional: irisan daun bawang, cabai, atau ayam suwir</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold text-[#803f22] mb-2">Cara Memasak:</h3>
+      <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-6">
+        <li>Panaskan minyak di wajan.</li>
+        <li>Tumis bawang putih hingga harum.</li>
+        <li>Masukkan telur, orak-arik hingga matang.</li>
+        <li>Tambahkan nasi, aduk rata.</li>
+        <li>Tuang kecap manis dan garam. Aduk hingga tercampur rata dan nasi berwarna kecoklatan.</li>
+        <li>Tambahkan topping sesuai selera (opsional).</li>
+        <li>Angkat dan sajikan hangat.</li>
+      </ol>
+
+      <div class="text-sm text-gray-500">Tips: Gunakan nasi dingin atau sisa nasi semalam agar hasil nasi goreng lebih enak dan tidak lengket.</div>
+    </div>
+  </section>
+
+  <footer class="bg-[#803f22] text-white pt-10 pb-6 mt-10">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+  
+      <div>
+        <h3 class="text-xl font-bold mb-3">🍴 CookEasy</h3>
+        <p class="text-sm text-orange-100">Temukan inspirasi masakan harian dari resep sederhana sampai favorit keluarga. Masak jadi lebih mudah dan menyenangkan!</p>
+        <p class="text-sm mt-3 text-orange-200">&copy; 2025 CookEasy</p>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-3">Navigasi Cepat</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-orange-300 transition">Beranda</a></li>
+          <li><a href="recipe.html" class="hover:text-orange-300 transition">Resep</a></li>
+          <li><a href="guide.html" class="hover:text-orange-300 transition">Panduan Dasar</a></li>
+          <li><a href="saved.html" class="hover:text-orange-300 transition">Simpanan Saya</a></li>
+          <li><a href="signin.html" class="hover:text-orange-300 transition">Login/Register</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-3">Hubungi Kami</h4>
+        <ul class="text-sm space-y-1 text-orange-100">
+          <li>Email: <a href="mailto:info@cookeasy.com" class="hover:text-orange-300">info@cookeasy.com</a></li>
+          <li>Instagram: <a href="https://instagram.com/cookeasy" class="hover:text-orange-300">@cookeasy</a></li>
+          <li>Facebook: <a href="#" class="hover:text-orange-300">CookEasy Official</a></li>
+          <li>WhatsApp: <a href="https://wa.me/6281234567890" class="hover:text-orange-300">+62 812-3456-7890</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-orange-300 mt-8 pt-4 text-center text-sm text-orange-200">
+      Dibuat dengan cinta dan semangat memasak di Indonesia 🇮🇩
+    </div>
+  </footer>
+
+  <script>
+    let liked = false;
+    let saved = false;
+
+    function toggleLike() {
+      liked = !liked;
+      const btn = document.getElementById("likeBtn");
+      btn.textContent = liked ? "❤️ Liked" : "❤️";
+      btn.classList.toggle("bg-red-100", liked);
+    }
+
+    function toggleSave() {
+      saved = !saved;
+      const btn = document.getElementById("saveBtn");
+      btn.textContent = saved ? "💾 Saved" : "💾";
+      btn.classList.toggle("bg-green-100", saved);
+    }
+  </script>
+</body>
+</html>

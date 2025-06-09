@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resep - CookEasy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-[#fff9f7] text-gray-800">
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+
+      <div class="flex-shrink-0">
+        <h1 class="text-2xl font-bold text-[#803f22] tracking-wide">
+          🍴 Cook<span class="text-orange-500">Easy</span>
+        </h1>
+      </div>
+
+      <div class="hidden md:flex flex-grow justify-center space-x-6 items-center text-sm font-medium text-[#803f22]">
+        <a href="index.html" class="hover:text-orange-500 transition-all duration-300 active:scale-95">Homepage</a>
+        <a href="recipe.html" class="text-orange-500 font-semibold border-b-2 border-orange-500 active:scale-95">Recipe</a>
+        <a href="guide.html" class="hover:text-orange-500 transition-all duration-300 active:scale-95">Basic Guide</a>
+        <a href="saved.html" class="hover:text-orange-500 transition-all duration-300 active:scale-95">Saved</a>
+      </div>
+
+      <div class="flex-shrink-0">
+        <a href="signin.html" class="bg-[#803f22] text-white px-4 py-1 rounded hover:bg-[#5c2c14] transition-all duration-300 active:scale-95">
+          Login
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container mx-auto px-4 py-12 text-center">
+    <h2 class="text-4xl font-bold text-[#803f22] mb-4">🍽️ Resep Masakan Harian</h2>
+    <p class="text-gray-600 text-lg max-w-xl mx-auto">Inspirasi masakan harian yang cepat, lezat, dan mudah dibuat di rumah.</p>
+  </section>
+
+  <section class="container mx-auto px-4 py-6">
+    <input
+      id="searchInput"
+      type="text"
+      placeholder="Cari resep..."
+      class="w-full md:w-1/2 mx-auto block border border-gray-300 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+      onkeyup="filterRecipes()"></input>
+  </section>
+
+  <section
+    id="recipeList"
+    class="container mx-auto px-4 pb-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+   
+    <a href="nasgor.html" class="recipe-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] overflow-hidden group">
+      <img src="nasgor.jpeg" alt="Nasi Goreng" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300"/>
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-[#803f22] group-hover:text-orange-500 transition mb-1">Nasi Goreng Sederhana</h3>
+        <p class="text-sm text-gray-600 mb-3">Tumis bawang putih, masukkan nasi, telur, kecap, dan garam. Selesai dalam 15 menit!</p>
+        <div class="flex justify-between text-xs text-gray-500">
+          <span>⏱️ 15 menit</span>
+          <span>⭐ Mudah</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="ayamGoreng.html" class="recipe-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] overflow-hidden group">
+      <img src="ayamGoreng.jpeg" alt="Ayam Goreng" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300"/>
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-[#803f22] group-hover:text-orange-500 transition mb-1">Ayam Goreng Crispy</h3>
+        <p class="text-sm text-gray-600 mb-3">Ayam dilumuri bumbu, dibalut tepung, lalu digoreng renyah. Cocok untuk bekal anak!</p>
+        <div class="flex justify-between text-xs text-gray-500">
+          <span>⏱️ 40 menit</span>
+          <span>⭐ Normal</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="sayurSop.html" class="recipe-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] overflow-hidden group">
+      <img src="sayursop.jpeg" alt="Sayur Sop" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300"/>
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-[#803f22] group-hover:text-orange-500 transition mb-1">Sayur Sop Segar</h3>
+        <p class="text-sm text-gray-600 mb-3">Rebus wortel, kentang, kol, dan ayam dalam kaldu gurih. Cocok disantap hangat.</p>
+        <div class="flex justify-between text-xs text-gray-500">
+          <span>⏱️ 30 menit</span>
+          <span>⭐ Mudah</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="telurDadar.html" class="recipe-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] overflow-hidden group">
+      <img src="telurdadar.jpeg" alt="Telur Dadar" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300"/>
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-[#803f22] group-hover:text-orange-500 transition mb-1">Telur Dadar Gurih</h3>
+        <p class="text-sm text-gray-600 mb-3">Campur telur dengan daun bawang dan sedikit tepung, lalu goreng hingga keemasan.</p>
+        <div class="flex justify-between text-xs text-gray-500">
+          <span>⏱️ 10 menit</span>
+          <span>⭐ Mudah</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="spaghetti.html" class="recipe-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] overflow-hidden group">
+      <img src="spaghetti.jpeg" alt="Spaghetti" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300"/>
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-[#803f22] group-hover:text-orange-500 transition mb-1">Spaghetti Saus Tomat</h3>
+        <p class="text-sm text-gray-600 mb-3">Rebus spaghetti, buat saus dari tomat, bawang, dan oregano. Sederhana dan lezat!</p>
+        <div class="flex justify-between text-xs text-gray-500">
+          <span>⏱️ 25 menit</span>
+          <span>⭐ Normal</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="pancake.html" class="recipe-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] overflow-hidden group">
+      <img src="pancake.jpeg" alt="Pancake" class="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-300"/>
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-[#803f22] group-hover:text-orange-500 transition mb-1">Pancake Sarapan</h3>
+        <p class="text-sm text-gray-600 mb-3">Campur tepung, telur, susu, dan gula. Masak di atas teflon anti lengket. Sajikan hangat!</p>
+        <div class="flex justify-between text-xs text-gray-500">
+          <span>⏱️ 20 menit</span>
+          <span>⭐ Mudah</span>
+        </div>
+      </div>
+    </a>
+  </section>
+
+  <footer class="bg-[#803f22] text-white pt-10 pb-6 mt-10">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <div>
+        <h3 class="text-xl font-bold mb-3">🍴 CookEasy</h3>
+        <p class="text-sm text-orange-100">Temukan inspirasi masakan harian dari resep sederhana sampai favorit keluarga. Masak jadi lebih mudah dan menyenangkan!</p>
+        <p class="text-sm mt-3 text-orange-200">&copy; 2025 CookEasy</p>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-3">Navigasi Cepat</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="hover:text-orange-300 transition">Beranda</a></li>
+          <li><a href="recipe.html" class="hover:text-orange-300 transition">Resep</a></li>
+          <li><a href="guide.html" class="hover:text-orange-300 transition">Panduan Dasar</a></li>
+          <li><a href="saved.html" class="hover:text-orange-300 transition">Simpanan Saya</a></li>
+          <li><a href="signin.html" class="hover:text-orange-300 transition">Login/Register</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-3">Hubungi Kami</h4>
+        <ul class="text-sm space-y-1 text-orange-100">
+          <li>Email: <a href="mailto:info@cookeasy.com" class="hover:text-orange-300">info@cookeasy.com</a></li>
+          <li>Instagram: <a href="https://instagram.com/cookeasy" class="hover:text-orange-300">@cookeasy</a></li>
+          <li>Facebook: <a href="#" class="hover:text-orange-300">CookEasy Official</a></li>
+          <li>WhatsApp: <a href="https://wa.me/6281234567890" class="hover:text-orange-300">+62 812-3456-7890</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-orange-300 mt-8 pt-4 text-center text-sm text-orange-200">
+      Dibuat dengan cinta dan semangat memasak di Indonesia 🇮🇩
+    </div>
+  </footer>
+
+  <script>
+    function filterRecipes() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.recipe-card');
+
+      cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        if (title.includes(input)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
