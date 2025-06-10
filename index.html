@@ -30,8 +30,11 @@
       </div>
 
       <div class="flex-shrink-0" id="userMenu">
-        <a href="signin.html" id="loginBtn" class="bg-[#803f22] text-white px-4 py-1 rounded hover:bg-[#5c2c14] transition-all duration-300 active:scale-95">
-          Login
+        <a href="signin.html" class="bg-gradient-to-r from-[#803f22] to-orange-600 text-white px-4 py-2 rounded-full hover:shadow-lg transition-all duration-300 active:scale-95 flex items-center">
+          <span>Login</span>
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
+          </svg>
         </a>
       </div>
     </div>
@@ -51,90 +54,100 @@
       <h3 class="text-2xl font-semibold text-center mb-10 text-[#803f22]">Fitur Unggulan</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-[0_6px_20px_rgba(128,63,34,0.4)] hover:-translate-y-1 duration-500">
-          <div class="h-48 bg-gradient-to-r from-[#ffe1d8] to-[#fff3ec] flex items-center justify-center">
-            <img src="Resep.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover">
-          </div>
-          <div class="px-6 pt-6 pb-3"> 
-            <h3 class="text-xl font-semibold mb-2 text-[#803f22]">Resep</h3>
-            <p class="text-gray-600 mb-4">Kumpulan resep mudah dan praktis untuk pemula.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Resep</span>
-              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Pemula</span>
+        <a href="recipe.html" class="group block">
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-[0_6px_20px_rgba(128,63,34,0.4)] hover:-translate-y-1 duration-500 transition-transform">
+            <div class="h-48 bg-gradient-to-r from-[#ffe1d8] to-[#fff3ec] flex items-center justify-center">
+              <img src="Resep.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover">
             </div>
-            <div class="flex justify-end">
-              <a href="recipe.html" class="text-accent hover:text-primary font-medium">Lihat Detail →</a>
+            <div class="px-6 pt-6 pb-3">
+              <h3 class="text-xl font-semibold mb-2 text-[#803f22] group-hover:text-orange-500 transition">Resep</h3>
+              <p class="text-gray-600 mb-4">Kumpulan resep mudah dan praktis untuk pemula.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Resep</span>
+                <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Pemula</span>
+              </div>
+              <div class="flex justify-end">
+                <span class="text-accent hover:text-primary font-medium">Lihat Detail →</span>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-[0_6px_20px_rgba(128,63,34,0.4)] hover:-translate-y-1 duration-500">
-          <div class="h-48 bg-gradient-to-r from-[#ffe1d8] to-[#fff3ec] flex items-center justify-center">
-            <img src="PanduanMasak.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2 text-[#803f22]">Panduan Teknik Dasar</h3>
-            <p class="text-gray-600 mb-4">Pelajari teknik memasak dari cara memotong hingga menumis.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Panduan</span>
-              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Memasak</span>
+        <a href="guide.html" class="group block">
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-[0_6px_20px_rgba(128,63,34,0.4)] hover:-translate-y-1 duration-500 transition-transform">
+            <div class="h-48 bg-gradient-to-r from-[#ffe1d8] to-[#fff3ec] flex items-center justify-center">
+              <img src="PanduanMasak.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover">
             </div>
-            <div class="flex justify-end">
-              <a href="guide.html" class="text-accent hover:text-primary font-medium">Lihat Detail →</a>
+            <div class="px-6 pt-6 pb-3">
+              <h3 class="text-xl font-semibold mb-2 text-[#803f22] group-hover:text-orange-500 transition">Panduan Teknik Dasar</h3>
+              <p class="text-gray-600 mb-4">Pelajari teknik memasak dari cara memotong hingga menumis.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Panduan</span>
+                <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Memasak</span>
+              </div>
+              <div class="flex justify-end">
+                <span class="text-accent hover:text-primary font-medium">Lihat Detail →</span>
+              </div>
             </div>
           </div>
-        </div> 
+        </a>
 
-        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-[0_6px_20px_rgba(128,63,34,0.4)] hover:-translate-y-1 duration-500">
-          <div class="h-48 bg-gradient-to-r from-[#ffe1d8] to-[#fff3ec] flex items-center justify-center">
-            <img src="CheffBot.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2 text-[#803f22]">ChefBot</h3>
-            <p class="text-gray-600 mb-4">Asisten masak interaktif yang siap menjawab pertanyaanmu.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Asisten</span>
-              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Online</span>
+        <a href="ChefBot.html" class="group block">
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-[0_6px_20px_rgba(128,63,34,0.4)] hover:-translate-y-1 duration-500 transition-transform">
+            <div class="h-48 bg-gradient-to-r from-[#ffe1d8] to-[#fff3ec] flex items-center justify-center">
+              <img src="CheffBot.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover">
             </div>
-            <div class="flex justify-end">
-              <a href="ChefBot.html" class="text-accent hover:text-primary font-medium">Lihat Detail →</a>
+            <div class="px-6 pt-6 pb-3">
+              <h3 class="text-xl font-semibold mb-2 text-[#803f22] group-hover:text-orange-500 transition">ChefBot</h3>
+              <p class="text-gray-600 mb-4">Asisten masak interaktif yang siap menjawab pertanyaanmu.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Asisten</span>
+                <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Online</span>
+              </div>
+              <div class="flex justify-end">
+                <span class="text-accent hover:text-primary font-medium">Lihat Detail →</span>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-[0_6px_20px_rgba(128,63,34,0.4)] hover:-translate-y-1 duration-500">
-          <div class="h-48 bg-gradient-to-r from-[#ffe1d8] to-[#fff3ec] flex items-center justify-center">
-            <img src="Musik.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2 text-[#803f22]">Rekomendasi Harian + Musik</h3>
-            <p class="text-gray-600 mb-4">Nikmati tips harian dan playlist sambil memasak.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Musik</span>
-              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Harian</span>
+        <a href="RekomendasiHarian.html" class="group block">
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-[0_6px_20px_rgba(128,63,34,0.4)] hover:-translate-y-1 duration-500 transition-transform">
+            <div class="h-48 bg-gradient-to-r from-[#ffe1d8] to-[#fff3ec] flex items-center justify-center">
+              <img src="Musik.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover">
             </div>
-            <div class="flex justify-end">
-              <a href="RekomendasiHarian.html" class="text-accent hover:text-primary font-medium">Lihat Detail →</a>
+            <div class="px-6 pt-6 pb-3">
+              <h3 class="text-xl font-semibold mb-2 text-[#803f22] group-hover:text-orange-500 transition">Rekomendasi Harian + Musik</h3>
+              <p class="text-gray-600 mb-4">Nikmati tips harian dan playlist sambil memasak.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Musik</span>
+                <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Harian</span>
+              </div>
+              <div class="flex justify-end">
+                <span class="text-accent hover:text-primary font-medium">Lihat Detail →</span>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-[0_6px_20px_rgba(128,63,34,0.4)] hover:-translate-y-1 duration-500">
-          <div class="h-48 bg-gradient-to-r from-[#ffe1d8] to-[#fff3ec] flex items-center justify-center">
-            <img src="Favorit.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2 text-[#803f22]">Simpan Resep Favorit</h3>
-            <p class="text-gray-600 mb-4">Simpan resep favoritmu dan akses kapan saja.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Resep</span>
-              <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Favorit</span>
+        <a href="saved.html" class="group block">
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-[0_6px_20px_rgba(128,63,34,0.4)] hover:-translate-y-1 duration-500 transition-transform">
+            <div class="h-48 bg-gradient-to-r from-[#ffe1d8] to-[#fff3ec] flex items-center justify-center">
+              <img src="Favorit.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover">
             </div>
-            <div class="flex justify-end">
-              <a href="saved.html" class="text-accent hover:text-primary font-medium">Lihat Detail →</a>
+            <div class="px-6 pt-6 pb-3">
+              <h3 class="text-xl font-semibold mb-2 text-[#803f22] group-hover:text-orange-500 transition">Simpan Resep Favorit</h3>
+              <p class="text-gray-600 mb-4">Simpan resep favoritmu dan akses kapan saja.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Resep</span>
+                <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-xs">Favorit</span>
+              </div>
+              <div class="flex justify-end">
+                <span class="text-accent hover:text-primary font-medium">Lihat Detail →</span>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -155,10 +168,13 @@
     ></textarea>
     <button
       type="submit"
-      class="bg-[#803f22] text-white px-6 py-2 rounded hover:bg-[#6a341b] transition"
-    >
-      Kirim Testimonial
+      id="submitBtn"
+      class="bg-[#803f22] text-white px-6 py-2 rounded hover:bg-[#6a341b] transition flex items-center justify-center space-x-2">
+      <span id="btnText">Kirim Testimonial</span>
+      <span id="loadingSpinner" class="hidden animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></span>
+      <span id="sendingText" class="hidden">Sending...</span>
     </button>
+
   </form>
 
   <div id="testimonialList" class="space-y-4 max-w-xl mx-auto mt-6"></div>
@@ -225,8 +241,11 @@
         `;
 
         document.getElementById('logoutBtn').addEventListener('click', function() {
-          localStorage.removeItem('cookeasyUser');
-          location.reload();
+          const confirmLogout = confirm("Apakah Anda yakin ingin logout?");
+          if (confirmLogout) {
+            localStorage.removeItem('cookeasyUser');
+            location.reload();
+          }
         });
       }
     });
@@ -236,26 +255,28 @@
     });
 
     const form = document.getElementById('testimonialForm');
-    const nameField = document.getElementById('name');
-    const messageField = document.getElementById('message');
-    const testimonialList = document.getElementById('testimonialList');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const loadingSpinner = document.getElementById('loadingSpinner');
+    const sendingText = document.getElementById('sendingText');
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      const name = nameField.value.trim();
-      const message = messageField.value.trim();
+      btnText.classList.add('hidden');
+      loadingSpinner.classList.remove('hidden');
+      sendingText.classList.remove('hidden');
 
-      if (name && message) {
-        const testimonialDiv = document.createElement('div');
-        testimonialDiv.className = 'bg-[#fff4ef] px-6 py-4 rounded shadow text-center';
-        testimonialDiv.innerHTML = `
-          <p class="italic text-[#344054] text-lg">"${message}"</p>
-          <p class="mt-2 text-[#803f22] font-semibold">— ${name}</p>
-        `;
-        testimonialList.appendChild(testimonialDiv);
-        form.reset();
-      }
+      setTimeout(() => {
+      // Reset tombol kembali normal
+      btnText.classList.remove('hidden');
+      loadingSpinner.classList.add('hidden');
+      sendingText.classList.add('hidden');
+
+      form.reset();
+
+      alert("Testimonial berhasil dikirim!");
+      }, 2000);
     });
   </script>
 </body>
