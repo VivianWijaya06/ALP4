@@ -182,25 +182,21 @@
       { 
         title: "Nasi Goreng Spesial", 
         desc: "Tumis bawang putih, masukkan nasi, telur, kecap, dan cabai.",
-        category: "Makanan Utama",
         prepTime: "15 menit"
       },
       { 
         title: "Ayam Bakar Teflon", 
         desc: "Marinasi ayam lalu bakar di teflon sampai matang.",
-        category: "Daging",
         prepTime: "30 menit"
       },
       { 
         title: "Spaghetti", 
         desc: "Masak saus carbonara yang creamy",
-        category: "Makanan utama",
         prepTime: "20 menit"
       },
       { 
         title: "Sop Sayur Sehat", 
         desc: "Rebus sayur-sayuran dan bumbu sederhana untuk sup lezat.",
-        category: "Sayuran",
         prepTime: "20 menit"
       }
     ];
@@ -226,7 +222,6 @@
         card.innerHTML = `
           <div class="flex justify-between items-start mb-2">
             <h3 class="text-xl font-semibold text-[#803f22]">${recipe.title}</h3>
-            <span class="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded-full">${recipe.category}</span>
           </div>
           <p class="text-gray-700 text-sm mb-4">${recipe.desc}</p>
           <div class="flex justify-between items-center">

@@ -236,8 +236,7 @@
   
       input.value = '';
     });
-  
-    // Biarkan pengguna mengirim pesan dengan tombol Enter
+
     input.addEventListener('keypress', function(e) {
       if (e.key === 'Enter') {
         form.dispatchEvent(new Event('submit'));

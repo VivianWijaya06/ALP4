@@ -10,13 +10,78 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .slide-up {
+      animation: slideUp 0.8s ease-out forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .scale-in {
+      animation: scaleIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      transform-origin: center;
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    
+    @keyframes scaleIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+    .delay-4 { animation-delay: 0.8s; }
+    .delay-5 { animation-delay: 1s; }
+    
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .rotate-in {
+      animation: rotateIn 0.8s ease-out forwards;
+      transform-origin: center;
+    }
+    
+    @keyframes rotateIn {
+      from {
+        opacity: 0;
+        transform: rotate(-10deg);
+      }
+      to {
+        opacity: 1;
+        transform: rotate(0);
+      }
     }
   </style>
 </head>
 <body class="bg-[#fff9f7] text-gray-800">
-  <nav class="bg-white shadow-md sticky top-0 z-50">
+  <nav class="bg-white shadow-md sticky top-0 z-50 slide-up">
     <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex-shrink-0">
+      <div class="flex-shrink-0 rotate-in">
         <h1 class="text-2xl font-bold text-[#803f22] tracking-wide">
           🍴 Cook<span class="text-orange-500">Pedia</span>
         </h1>
@@ -40,16 +105,16 @@
     </div>
   </nav>
   
-  <section class="container mx-auto px-4 py-12 text-center">
+  <section class="container mx-auto px-4 py-12 text-center slide-up delay-1">
     <h2 class="text-3xl font-bold mb-4 text-[#803f22]">Mulai Perjalanan Memasakmu Hari Ini! 🎉</h2>
     <p class="text-lg mb-6 text-gray-700">Belajar memasak dari dasar, dengan panduan visual, audio, dan dukungan komunitas. Yuk mulai!</p>
     <div class="flex justify-center space-x-4">
-      <a href="recipe.html" class="bg-[#d8c09f] text-white px-6 py-2 rounded hover:bg-[#d8c09f] transition">← Lihat Resep</a>
-      <a href="guide.html" class="bg-[#d2aa72] text-white px-6 py-2 rounded hover:bg-[#d2aa72] transition">Mulai Belajar ➜</a>
+      <a href="recipe.html" class="bg-[#d8c09f] text-white px-6 py-2 rounded hover:bg-[#d8c09f] transition transform hover:scale-105">← Lihat Resep</a>
+      <a href="guide.html" class="bg-[#d2aa72] text-white px-6 py-2 rounded hover:bg-[#d2aa72] transition transform hover:scale-105">Mulai Belajar ➜</a>
     </div>
   </section>
 
-  <section id="fitur" class="py-12 bg-white">
+  <section id="fitur" class="py-12 bg-white slide-up delay-2">
     <div class="container mx-auto px-4">
       <h3 class="text-2xl font-semibold text-center mb-10 text-[#803f22]">Fitur Unggulan</h3>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -57,7 +122,7 @@
         <a href="recipe.html" class="group block">
           <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-[0_6px_20px_rgba(128,63,34,0.4)] hover:-translate-y-1 duration-500 transition-transform">
             <div class="h-48 bg-gradient-to-r from-[#ffe1d8] to-[#fff3ec] flex items-center justify-center">
-              <img src="Resep.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover">
+              <img src="Resep.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover scale-in delay-3">
             </div>
             <div class="px-6 pt-6 pb-3">
               <h3 class="text-xl font-semibold mb-2 text-[#803f22] group-hover:text-orange-500 transition">Resep</h3>
@@ -76,7 +141,7 @@
         <a href="guide.html" class="group block">
           <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-[0_6px_20px_rgba(128,63,34,0.4)] hover:-translate-y-1 duration-500 transition-transform">
             <div class="h-48 bg-gradient-to-r from-[#ffe1d8] to-[#fff3ec] flex items-center justify-center">
-              <img src="PanduanMasak.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover">
+              <img src="PanduanMasak.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover scale-in delay-3">
             </div>
             <div class="px-6 pt-6 pb-3">
               <h3 class="text-xl font-semibold mb-2 text-[#803f22] group-hover:text-orange-500 transition">Panduan Teknik Dasar</h3>
@@ -95,7 +160,7 @@
         <a href="ChefBot.html" class="group block">
           <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-[0_6px_20px_rgba(128,63,34,0.4)] hover:-translate-y-1 duration-500 transition-transform">
             <div class="h-48 bg-gradient-to-r from-[#ffe1d8] to-[#fff3ec] flex items-center justify-center">
-              <img src="CheffBot.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover">
+              <img src="CheffBot.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover scale-in delay-3">
             </div>
             <div class="px-6 pt-6 pb-3">
               <h3 class="text-xl font-semibold mb-2 text-[#803f22] group-hover:text-orange-500 transition">ChefBot</h3>
@@ -114,7 +179,7 @@
         <a href="RekomendasiHarian.html" class="group block">
           <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-[0_6px_20px_rgba(128,63,34,0.4)] hover:-translate-y-1 duration-500 transition-transform">
             <div class="h-48 bg-gradient-to-r from-[#ffe1d8] to-[#fff3ec] flex items-center justify-center">
-              <img src="Musik.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover">
+              <img src="Musik.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover scale-in delay-4">
             </div>
             <div class="px-6 pt-6 pb-3">
               <h3 class="text-xl font-semibold mb-2 text-[#803f22] group-hover:text-orange-500 transition">Rekomendasi Harian + Musik</h3>
@@ -133,7 +198,7 @@
         <a href="saved.html" class="group block">
           <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-[0_6px_20px_rgba(128,63,34,0.4)] hover:-translate-y-1 duration-500 transition-transform">
             <div class="h-48 bg-gradient-to-r from-[#ffe1d8] to-[#fff3ec] flex items-center justify-center">
-              <img src="Favorit.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover">
+              <img src="Favorit.jpeg" alt="Gambar Fitur Resep" class="w-full h-full object-cover scale-in delay-4">
             </div>
             <div class="px-6 pt-6 pb-3">
               <h3 class="text-xl font-semibold mb-2 text-[#803f22] group-hover:text-orange-500 transition">Simpan Resep Favorit</h3>
@@ -152,24 +217,24 @@
     </div>
   </section>
 
-  <form id="testimonialForm" class="bg-white p-6 rounded shadow max-w-xl mx-auto mt-8">
+  <form id="testimonialForm" class="bg-white p-6 rounded shadow max-w-xl mx-auto mt-8 slide-up delay-5">
     <input
       type="text"
       id="name"
       placeholder="Your Name"
-      class="w-full p-3 border rounded mb-4"
+      class="w-full p-3 border rounded mb-4 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition"
       required
     />
     <textarea
       id="message"
       placeholder="Write a Testimonial..."
-      class="w-full p-3 border rounded mb-4"
+      class="w-full p-3 border rounded mb-4 focus:ring-2 focus:ring-orange-500 focus:border-transparent transition"
       required
     ></textarea>
     <button
       type="submit"
       id="submitBtn"
-      class="bg-[#803f22] text-white px-6 py-2 rounded hover:bg-[#6a341b] transition flex items-center justify-center space-x-2">
+      class="bg-[#803f22] text-white px-6 py-2 rounded hover:bg-[#6a341b] transition flex items-center justify-center space-x-2 transform hover:scale-105">
       <span id="btnText">Kirim Testimonial</span>
       <span id="loadingSpinner" class="hidden animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></span>
       <span id="sendingText" class="hidden">Sending...</span>
@@ -177,7 +242,7 @@
   </form>
     <div id="testimonialList" class="space-y-4 max-w-xl mx-auto mt-6"></div>
  
-  <footer class="bg-gradient-to-b from-[#803f22] to-[#5a2d18] text-white pt-12 pb-8">
+  <footer class="bg-gradient-to-b from-[#803f22] to-[#5a2d18] text-white pt-12 pb-8 slide-up delay-5">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
         <div class="flex flex-col">
@@ -231,7 +296,7 @@
   </footer>
 
   <a href="ChefBot.html" 
-    class="fixed bottom-6 right-6 bg-[#fff0e6] hover:bg-[#ffd9c2] text-[#5c2c14] border border-[#c79b7e] px-4 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center space-x-2 z-50">
+    class="fixed bottom-6 right-6 bg-[#fff0e6] hover:bg-[#ffd9c2] text-[#5c2c14] border border-[#c79b7e] px-4 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center space-x-2 z-50 floating">
     <span class="text-lg">🤖</span>
   </a>  
 
