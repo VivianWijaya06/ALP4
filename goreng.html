@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Teknik Memotong - Panduan CookEasy</title>
+  <title>Teknik Menggoreng - Panduan CookEasy</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
-  <style>body { font-family: 'Poppins', sans-serif; }
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
     .floating-btn {
       animation: float 3s ease-in-out infinite;
     }
-    
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
@@ -18,8 +18,7 @@
   </style>
 </head>
 <body class="bg-[#fff9f7] text-gray-800">
-
-  <nav class="bg-white shadow-md sticky top-0 z-50 slide-up">
+<nav class="bg-white shadow-md sticky top-0 z-50 slide-up">
     <div class="container mx-auto px-6 py-4 flex items-center justify-between">
       <div class="flex-shrink-0 rotate-in">
         <h1 class="text-2xl font-bold text-[#803f22] tracking-wide">
@@ -46,25 +45,27 @@
   </nav>
 
   <section class="container mx-auto px-6 py-12 max-w-3xl">
-    <h2 class="text-4xl font-bold text-[#803f22] mb-6">🔪 Teknik Memotong</h2>
+    <h2 class="text-4xl font-bold text-[#803f22] mb-6">🍳 Teknik Menggoreng</h2>
     <p class="text-lg text-gray-700 mb-4">
-      Teknik memotong yang tepat membuat pekerjaan memasak lebih cepat dan aman. Pelajari berbagai teknik seperti iris, cincang, dadu, julienne, dan brunoise.
+      Menggoreng adalah salah satu metode memasak paling populer di seluruh dunia. Dari camilan renyah hingga hidangan goreng keemasan, menguasai teknik menggoreng dapat meningkatkan rasa dan tekstur masakan.
     </p>
     <p class="text-lg text-gray-700 mb-4">
-      Menguasai teknik ini juga menjaga bahan tetap seragam sehingga matang merata saat dimasak.
+      Pelajari suhu minyak yang tepat, jenis-jenis teknik menggoreng, dan tips keselamatan untuk mendapatkan hasil terbaik.
     </p>
-    <h3 class="text-2xl font-semibold text-[#803f22] mb-3 mt-8">Beberapa Teknik Populer:</h3>
+
+    <h3 class="text-2xl font-semibold text-[#803f22] mb-3 mt-8">Jenis Teknik Menggoreng yang Umum:</h3>
     <ul class="list-disc list-inside text-gray-700 space-y-2">
-      <li><strong>Iris:</strong> Memotong bahan menjadi irisan tipis dan panjang.</li>
-      <li><strong>Cincang:</strong> Memotong bahan menjadi potongan kecil tidak beraturan.</li>
-      <li><strong>Dadu:</strong> Memotong bahan menjadi potongan kotak kecil.</li>
-      <li><strong>Julienne:</strong> Memotong bahan menjadi potongan tipis dan panjang menyerupai korek api.</li>
-      <li><strong>Brunoise:</strong> Memotong bahan menjadi potongan sangat kecil (dadu halus).</li>
+      <li><strong>Deep Frying:</strong> Menggoreng makanan dengan cara merendam sepenuhnya dalam minyak panas hingga renyah dan berwarna keemasan.</li>
+      <li><strong>Shallow Frying:</strong> Menggoreng makanan dengan sedikit minyak dan biasanya dibalik di tengah proses memasak.</li>
+      <li><strong>Stir Frying:</strong> Memasak cepat dengan panas tinggi dan sedikit minyak, biasanya menggunakan wajan (wok).</li>
+      <li><strong>Pan Frying:</strong> Menggoreng menggunakan minyak sedang di atas wajan datar, cocok untuk daging dan ikan.</li>
+      <li><strong>Dry Frying:</strong> Menggoreng tanpa minyak, memanfaatkan lemak alami dari bahan makanan (misalnya: daging asap).</li>
     </ul>
+
     <a href="guide.html" class="inline-block mt-8 px-6 py-2 bg-[#803f22] text-white rounded hover:bg-[#5c2c14] transition">← Kembali ke Panduan Dasar</a>
   </section>
 
-  <footer class="bg-gradient-to-b from-[#803f22] to-[#5a2d18] text-white pt-12 pb-8 slide-up delay-5">
+<footer class="bg-gradient-to-b from-[#803f22] to-[#5a2d18] text-white pt-12 pb-8 slide-up delay-5">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
         <div class="flex flex-col">
@@ -120,13 +121,13 @@
   <a href="ChefBot.html" 
     class="floating-btn fixed bottom-6 right-6 bg-[#fff0e6] hover:bg-[#ffd9c2] text-[#5c2c14] border border-[#c79b7e] px-4 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center space-x-2 z-50">
     <span class="text-lg animate-pulse">🤖</span>
-  </a>    
+  </a>  
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const userData = localStorage.getItem('cookeasyUser');
-    const userMenu = document.getElementById('userMenu');
+  const userData = localStorage.getItem('cookeasyUser');
+  const userMenu = document.getElementById('userMenu');
 
-    if(userData) {
+  if(userData) {
         const user = JSON.parse(userData);
         userMenu.innerHTML = `
           <div class="relative group inline-block text-left">
@@ -143,15 +144,17 @@
         </div>
         `;
 
-      document.getElementById('logoutBtn').addEventListener('click', function() {
-        const confirmLogout = confirm("Apakah Anda yakin ingin logout?");
-        if (confirmLogout) {
-          localStorage.removeItem('cookeasyUser');
-          location.reload();
-        }
-      });
-    }
-  });
+    document.getElementById('logoutBtn').addEventListener('click', function() {
+          const confirmLogout = confirm("Apakah Anda yakin ingin logout?");
+          if (confirmLogout) {
+            localStorage.removeItem('cookeasyUser');
+            location.reload();
+          }
+        });
+  }
+});
+
 </script>
 </body>
 </html>
+
