@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sayur Sop - CookEasy</title>
+  <title>Beef Wellington - CookPedia</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -21,6 +23,7 @@
   </style>
 </head>
 <body class="bg-[#fff9f7] text-gray-800">
+
   <nav class="bg-white shadow-md sticky top-0 z-50 slide-up">
     <div class="container mx-auto px-6 py-4 flex items-center justify-between">
       <div class="flex-shrink-0 rotate-in">
@@ -49,7 +52,7 @@
 
   <section class="container mx-auto px-4 py-10 max-w-4xl">
     <div class="bg-white rounded shadow p-6 relative">
-      <img src="sayursop.jpeg" alt="Sayur Sop" class="rounded mb-6 w-full object-cover h-64" />
+      <img src="BeefWellington.jpeg" alt="Beef Wellington" class="rounded mb-6 w-full object-cover h-64" />
       
       <div class="absolute top-4 right-4 flex gap-3">
         <button onclick="openShareModal()" class="bg-white border rounded-full p-2 shadow hover:bg-blue-100">
@@ -60,57 +63,55 @@
         </button>
       </div>
 
-      <h2 class="text-3xl font-bold text-[#803f22] mb-2">Sayur Sop</h2>
+      <h2 class="text-3xl font-bold text-[#803f22] mb-2">Beef Wellington</h2>
       <div class="flex gap-6 text-sm text-gray-600 mb-6">
-        <span>⏱️ 40 menit</span>
-        <span>⭐ Mudah</span>
+        <span>⏱️ 3 jam</span>
+        <span>⭐ Sulit</span>
         <span>🍽️ 4-5 Porsi</span>
       </div>
 
       <div class="flex flex-col md:flex-row gap-8 mb-6">
         <div class="md:w-1/2">
-          <h3 class="text-xl font-semibold text-[#803f22] mb-2">Alat-Alat :</h3>
-          <ul class="list-disc list-inside text-gray-700">
-            <li>Pisau Dapur Tajam</li>
-            <li>Talenan</li>
-            <li>Panci Besar</li>
-            <li>Spatula Kayu / Sendok Sayur</li>
-            <li>Wajan Kecil (untuk menumis)</li>
-            <li>Sendok Takar</li>
-            <li>Mangkuk Saji</li>
-            <li>Sendok Makan / Sendok Kuah</li>
-          </ul>
+            <h3 class="text-xl font-semibold text-[#803f22] mb-2">Alat-Alat :</h3>
+            <ul class="list-disc list-inside text-gray-700">
+              <li>Oven dengan termometer akurat</li>
+              <li>Rolling pin untuk pastry</li>
+              <li>Plastik wrap (untuk membungkus)</li>
+              <li>Tali daging (butcher's twine)</li>
+              <li>Food processor untuk duxelles</li>
+              <li>Wajan anti lengket</li>
+              <li>Pastry brush</li>
+              <li>Thermometer daging digital</li>
+            </ul>
         </div>
 
         <div class="md:w-1/2">
           <h3 class="text-xl font-semibold text-[#803f22] mb-2">Bahan-bahan:</h3>
-          <ul class="list-disc list-inside text-gray-700 mb-6">
-            <li>200 gr wortel, potong serong</li>
-            <li>150 gr kentang, potong dadu</li>
-            <li>150 gr kembang kol, potong kecil</li>
-            <li>100 gr buncis, potong-potong</li>
-            <li>1 buah tomat, potong-potong</li>
-            <li>1 batang daun bawang, iris tipis</li>
-            <li>3 siung bawang putih, cincang halus</li>
-            <li>1 buah bawang bombay, cincang halus</li>
-            <li>1 liter kaldu ayam atau air</li>
-            <li>Garam dan merica secukupnya</li>
-            <li>Minyak goreng untuk menumis</li>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>800g tenderloin sapi (bagian tengah)</li>
+            <li>300g jamur kancing, cincang halus</li>
+            <li>100g prosciutto atau Parma ham</li>
+            <li>2 sdm mustard Dijon</li>
+            <li>500g puff pastry (homemade atau siap pakai)</li>
+            <li>2 kuning telur untuk olesan</li>
+            <li>3 siung bawang putih, cincang</li>
+            <li>2 sdm minyak zaitun</li>
+            <li>Garam dan lada hitam secukupnya</li>
           </ul>
         </div>
       </div>
 
       <h3 class="text-xl font-semibold text-[#803f22] mb-2">Cara Memasak:</h3>
       <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-6">
-        <li>Panaskan sedikit minyak, tumis bawang putih dan bawang bombay hingga harum.</li>
-        <li>Masukkan kaldu ayam atau air, didihkan.</li>
-        <li>Tambahkan wortel, kentang, dan kembang kol, masak hingga setengah empuk.</li>
-        <li>Masukkan buncis dan tomat, masak hingga semua sayuran matang.</li>
-        <li>Berikan garam dan merica sesuai selera, terakhir masukkan daun bawang.</li>
-        <li>Angkat dan sajikan hangat.</li>
+        <li><strong>Siapkan daging:</strong> Bumbui tenderloin dengan garam dan lada. Panaskan minyak di wajan, panggang daging selama 2-3 menit per sisi hingga kecoklatan. Olesi dengan mustard saat masih hangat, dinginkan.</li>
+        <li><strong>Buat mushroom duxelles:</strong> Tumis jamur cincang dengan bawang putih hingga semua cairan menguap dan menjadi pasta kering. Dinginkan.</li>
+        <li><strong>Bungkus daging:</strong> Letakkan plastik wrap, susun prosciutto di atasnya, lalu sebarkan duxelles. Taruh daging di tengah, gulung rapat dengan plastik. Dinginkan 30 menit.</li>
+        <li><strong>Bungkus dengan pastry:</strong> Gilas puff pastry, letakkan daging yang sudah dibungkus di tengah. Potong pastry berlebih, olesi dengan kuning telur, lalu bungkus rapat. Dinginkan 30 menit lagi.</li>
+        <li><strong>Panggang:</strong> Olesi dengan kuning telur, buat pola diagonal di permukaan. Panggang di oven 200°C selama 35-40 menit hingga pastry emas dan daging mencapai 54°C untuk medium-rare.</li>
+        <li><strong>Istirahatkan:</strong> Diamkan 10 menit sebelum dipotong agar jus tidak keluar semua.</li>
       </ol>
 
-      <div class="text-sm text-gray-500">Tips: Untuk rasa kaldu yang lebih gurih, gunakan kaldu ayam homemade atau kaldu tulang.</div>
+      <div class="text-sm text-gray-500">Tips: Pastikan semua bahan benar-benar dingin sebelum dibungkus pastry. Gunakan thermometer daging untuk hasil yang akurat. Untuk pastry lebih renyah, olesi dengan kuning telur yang dicampur 1 sdt krim. Sajikan dengan red wine sauce dan kentang tumbuk</div>
     </div>
     <a href="recipe.html" class="inline-block mt-8 px-6 py-2 bg-[#803f22] text-white rounded hover:bg-[#5c2c14] transition">← Kembali ke Resep</a>
   </section>
@@ -175,10 +176,10 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-    const userData = localStorage.getItem('cookeasyUser');
-    const userMenu = document.getElementById('userMenu');
+      const userData = localStorage.getItem('cookeasyUser');
+      const userMenu = document.getElementById('userMenu');
 
-    if(userData) {
+      if(userData) {
         const user = JSON.parse(userData);
         userMenu.innerHTML = `
           <div class="relative group inline-block text-left">
@@ -195,16 +196,17 @@
         </div>
         `;
 
-      document.getElementById('logoutBtn').addEventListener('click', function() {
-        const confirmLogout = confirm("Apakah Anda yakin ingin logout?");
-        if (confirmLogout) {
-          localStorage.removeItem('cookeasyUser');
-          location.reload();
-        }
-      });
-    }
-  });
-  
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+          const confirmLogout = confirm("Apakah Anda yakin ingin logout?");
+          if (confirmLogout) {
+            localStorage.removeItem('cookeasyUser');
+            location.reload();
+          }
+        });
+      }
+    });
+
+
     let saved = false;
 
     function openShareModal() {
@@ -226,11 +228,10 @@
       window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
     }
 
-    function shareToTwitter() {
-      const url = encodeURIComponent(window.location.href);
-      const text = encodeURIComponent("Coba resep Ayam Goreng dari CookEasy! 🍗");
-      window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+    function shareToInstagram() {
+      window.open("https://www.instagram.com/yourusername", "_blank");
     }
+
 
     function copyLink() {
       navigator.clipboard.writeText(window.location.href).then(() => {
@@ -250,27 +251,27 @@
 
 
   <!-- Share Modal -->
-  <div id="shareModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
-    <div class="bg-white rounded-lg shadow-lg p-6 w-80">
-      <h3 class="text-lg font-semibold text-[#803f22] mb-4">Bagikan ke:</h3>
-      <div class="grid gap-3">
-        <a href="#" onclick="shareToWhatsApp()" class="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
-          <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-        <a href="#" onclick="shareToFacebook()" class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-          <i class="fab fa-facebook-f"></i> Facebook
-        </a>
-        <a href="#" onclick="shareToInstagram()" class="flex items-center gap-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 transition">
-          <i class="fab fa-instagram"></i> Instagram
-        </a>
-        <button onclick="copyLink()" class="flex items-center gap-2 bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">
-          <i class="fas fa-link"></i> Salin Link
-        </button>
-        <button onclick="closeShareModal()" class="block mt-2 text-sm text-gray-500 hover:text-gray-700">
-          Batal
-        </button>
-      </div>
+<div id="shareModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-lg p-6 w-80">
+    <h3 class="text-lg font-semibold text-[#803f22] mb-4">Bagikan ke:</h3>
+    <div class="grid gap-3">
+      <a href="#" onclick="shareToWhatsApp()" class="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="#" onclick="shareToFacebook()" class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      <a href="#" onclick="shareToInstagram()" class="flex items-center gap-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 transition">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <button onclick="copyLink()" class="flex items-center gap-2 bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">
+        <i class="fas fa-link"></i> Salin Link
+      </button>
+      <button onclick="closeShareModal()" class="block mt-2 text-sm text-gray-500 hover:text-gray-700">
+        Batal
+      </button>
     </div>
   </div>
+</div>
 </body>
 </html>

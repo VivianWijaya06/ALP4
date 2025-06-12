@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ayam Goreng - CookEasy</title>
+  <title>Ayam Goreng - CookPedia</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -70,17 +70,35 @@
         <span>🍽️ 4-5 Porsi</span>
       </div>
 
-      <h3 class="text-xl font-semibold text-[#803f22] mb-2">Bahan-bahan:</h3>
-      <ul class="list-disc list-inside text-gray-700 mb-6">
-        <li>1 ekor ayam, potong sesuai selera</li>
-        <li>3 siung bawang putih, haluskan</li>
-        <li>2 cm jahe, haluskan</li>
-        <li>2 sdm kecap manis</li>
-        <li>1 sdt garam</li>
-        <li>1/2 sdt merica bubuk</li>
-        <li>Minyak goreng secukupnya</li>
-        <li>Air secukupnya untuk marinasi</li>
-      </ul>
+      <div class="flex flex-col md:flex-row gap-8 mb-6">
+        <div class="md:w-1/2">
+          <h3 class="text-xl font-semibold text-[#803f22] mb-2">Alat-Alat :</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Wajan besar atau penggorengan dalam</li>
+            <li>Kompor</li>
+            <li>Penjepit makanan atau spatula</li>
+            <li>Pisau dan talenan (untuk memotong ayam dan bahan bumbu)</li>
+            <li>Blender atau ulekan (untuk menghaluskan bawang dan jahe)</li>
+            <li>Mangkuk besar (untuk marinasi ayam)</li>
+            <li>Saringan atau tisu dapur (untuk meniriskan minyak setelah digoreng)</li>
+            <li>Piring saji</li>
+          </ul>
+        </div>
+
+        <div class="md:w-1/2">
+          <h3 class="text-xl font-semibold text-[#803f22] mb-2">Bahan-bahan:</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>1 ekor ayam, potong sesuai selera</li>
+            <li>3 siung bawang putih, haluskan</li>
+            <li>2 cm jahe, haluskan</li>
+            <li>2 sdm kecap manis</li>
+            <li>1 sdt garam</li>
+            <li>1/2 sdt merica bubuk</li>
+            <li>Minyak goreng secukupnya</li>
+            <li>Air secukupnya untuk marinasi</li>
+          </ul>
+        </div>
+      </div>
 
       <h3 class="text-xl font-semibold text-[#803f22] mb-2">Cara Memasak:</h3>
       <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-6">
@@ -92,7 +110,7 @@
 
       <div class="text-sm text-gray-500">Tips: Agar kulit ayam lebih renyah, goreng ayam dalam minyak panas dan jangan terlalu sering dibolak-balik.</div>
     </div>
-    <a href="recipe.html" class="inline-block mt-8 px-6 py-2 bg-[#803f22] text-white rounded hover:bg-[#5c2c14] transition">← Kembali ke Panduan Dasar</a>
+    <a href="recipe.html" class="inline-block mt-8 px-6 py-2 bg-[#803f22] text-white rounded hover:bg-[#5c2c14] transition">← Kembali ke Resep</a>
   </section>
 
   <footer class="bg-gradient-to-b from-[#803f22] to-[#5a2d18] text-white pt-12 pb-8 slide-up delay-5">
@@ -169,8 +187,8 @@
             </svg>
           </button>
           <div class="absolute right-0 mt-3 w-40 origin-top-right bg-white border border-gray-200 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-50">
-            <a href="profile.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#803f22] transition-colors">My Profile</a>
-            <button id="logoutBtn" class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#803f22] transition-colors">Logout</button>
+            <a href="profile.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#803f22] transition-colors">Profil Saya</a>
+            <button id="logoutBtn" class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#803f22] transition-colors">Keluar</button>
           </div>
         </div>
         `;
@@ -252,7 +270,5 @@
     </div>
   </div>
 </div>
-
-
 </body>
 </html>
