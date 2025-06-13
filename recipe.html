@@ -10,8 +10,7 @@
     body {
       font-family: 'Poppins', sans-serif;
     }
-    
-    /* Custom animation classes */
+
     .recipe-card {
       opacity: 0;
       transform: translateY(20px);
@@ -56,32 +55,8 @@
       50% { transform: translateY(-10px); }
     }
     
-    /* Search input focus effect */
     .search-input:focus {
       box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.2);
-    }
-    
-    /* Section title animation */
-    .section-title {
-      position: relative;
-      display: inline-block;
-    }
-    
-    .section-title::after {
-      content: '';
-      position: absolute;
-      width: 50%;
-      height: 3px;
-      bottom: -8px;
-      left: 25%;
-      background: linear-gradient(90deg, #803f22, #f97316);
-      transform: scaleX(0);
-      transform-origin: center;
-      transition: transform 0.5s ease;
-    }
-    
-    .section-title:hover::after {
-      transform: scaleX(1);
     }
 
     .filter-buttons {
