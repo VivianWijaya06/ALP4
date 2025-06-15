@@ -51,7 +51,7 @@
             minlength="8"
             required>
           <button type="button" id="togglePassword" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-            <i class='bx bx-hide'></i>
+            <i class='bx bx-show'></i>
           </button>
         </div>
         <div id="password-error" class="error-message"></div>
@@ -116,7 +116,7 @@
       togglePassword.addEventListener('click', function() {
         const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
         passwordInput.setAttribute('type', type);
-        this.innerHTML = type === 'password' ? '<i class="bx bx-hide"></i>' : '<i class="bx bx-show"></i>';
+        this.innerHTML = type === 'password' ? '<i class="bx bx-show"></i>' : '<i class="bx bx-hide"></i>';
       });
 
       function showError(input, message) {
