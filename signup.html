@@ -165,7 +165,6 @@
       const termsCheckbox = document.getElementById('terms');
       const passwordStrengthFill = document.getElementById('password-strength-fill');
 
-      // Toggle password visibility
       togglePassword.addEventListener('click', function() {
         const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
         passwordInput.setAttribute('type', type);
@@ -178,7 +177,6 @@
         this.innerHTML = type === 'password' ? '<i class="bx bx-hide"></i>' : '<i class="bx bx-show"></i>';
       });
 
-      // Form validation
       function showError(input, message) {
         const errorElement = document.getElementById(`${input.id}-error`);
         input.classList.add('input-error');
