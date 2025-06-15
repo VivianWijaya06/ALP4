@@ -337,17 +337,15 @@
           
           localStorage.setItem('cookeasyUser', JSON.stringify(userData));
 
-          window.location.href = 'index.html';
-        } catch (error) {
-
-          alert('Pendaftaran gagal: ' + (error.message || 'Email sudah terdaftar'));
-        } finally {
-
-          submitText.textContent = 'Daftar';
-          submitSpinner.classList.add('hidden');
-          submitBtn.disabled = false;
-        }
-      });
+          window.location.href = 'select-level.html';
+          } catch (error) {
+            alert('Pendaftaran gagal: ' + (error.message || 'Email sudah terdaftar'));
+          } finally {
+            submitText.textContent = 'Daftar';
+            submitSpinner.classList.add('hidden');
+            submitBtn.disabled = false;
+          }
+        });
     });
 
     function socialSignup(provider) {
