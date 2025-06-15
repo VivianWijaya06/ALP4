@@ -3,87 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Panduan Dasar - CookEasy</title>
+  <title>Kebersihan dalam Memasak - Panduan CookEasy</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-
-    .guide-card {
-      transition: all 0.3s ease-in-out;
-      transform: translateY(0);
-    }
-
-    .guide-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .btn-transition {
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .dropdown-enter {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-
-    .dropdown-enter-active {
-      opacity: 1;
-      transform: translateY(0);
-      transition: opacity 200ms, transform 200ms;
-    }
-    
-    .dropdown-exit {
-      opacity: 1;
-    }
-    
-    .dropdown-exit-active {
-      opacity: 0;
-      transform: translateY(-10px);
-      transition: opacity 200ms, transform 200ms;
-    }
-    
-    .chefbot-btn {
-      transition: all 0.3s ease;
-      transform: scale(1);
-    }
-    
-    .chefbot-btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-  
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    .page-title {
-      animation: fadeInUp 0.6s ease-out forwards;
-    }
-  
-    .staggered-card {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.5s ease-out forwards;
-    }
-    
-    .staggered-card:nth-child(1) { animation-delay: 0.1s; }
-    .staggered-card:nth-child(2) { animation-delay: 0.2s; }
-    .staggered-card:nth-child(3) { animation-delay: 0.3s; }
-    .staggered-card:nth-child(4) { animation-delay: 0.4s; }
-    .staggered-card:nth-child(5) { animation-delay: 0.5s; }
-    .staggered-card:nth-child(6) { animation-delay: 0.6s; }
-
+  <style>body { font-family: 'Poppins', sans-serif; }
     .floating-btn {
       animation: float 3s ease-in-out infinite;
     }
@@ -94,8 +18,8 @@
     }
   </style>
 </head>
-
 <body class="bg-[#fff9f7] text-gray-800">
+
   <nav class="bg-white shadow-md sticky top-0 z-50 slide-up">
     <div class="container mx-auto px-6 py-4 flex items-center justify-between">
       <div class="flex-shrink-0 rotate-in">
@@ -122,46 +46,84 @@
     </div>
   </nav>
 
-  <section class="container mx-auto px-4 py-12 text-center">
-    <h2 class="text-4xl font-bold text-[#803f22] mb-4 page-title">🔪 Panduan Dasar Memasak</h2>
-    <p class="text-gray-600 text-lg max-w-xl mx-auto">Mulailah dari dasar dan kuasai teknik memasak yang penting!</p>
-  </section>
-
-  <section class="container mx-auto px-4 pb-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-    <a href="knife.html" class="block bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 group no-underline guide-card staggered-card">
-      <h3 class="text-xl font-semibold text-[#803f22] group-hover:text-orange-500 transition mb-2">1. Cara Memegang Pisau</h3>
-      <p class="text-sm text-gray-700">Pegang pisau dengan kokoh namun santai, gunakan jari telunjuk dan ibu jari untuk mengontrol bagian atas gagang.</p>
-    </a>
-    
-    <a href="cutting.html" class="block bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 group no-underline guide-card staggered-card">
-      <h3 class="text-xl font-semibold text-[#803f22] group-hover:text-orange-500 transition mb-2">2. Teknik Memotong</h3>
-      <p class="text-sm text-gray-700">Pelajari teknik dasar seperti iris, cincang, dadu, dan julienne untuk efisiensi dan keamanan.</p>
-    </a>
-
-    <a href="frying.html" class="block bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 group no-underline guide-card staggered-card">
-      <h3 class="text-xl font-semibold text-[#803f22] group-hover:text-orange-500 transition mb-2">3. Menumis dengan Benar</h3>
-      <p class="text-sm text-gray-700">Gunakan api sedang dan minyak panas, tumis bawang hingga harum sebelum bahan lainnya.</p>
-    </a>
-
-    <a href="boiling.html" class="block bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 group no-underline guide-card staggered-card">
-      <h3 class="text-xl font-semibold text-[#803f22] group-hover:text-orange-500 transition mb-2">4. Merebus Sayuran</h3>
-      <p class="text-sm text-gray-700">Gunakan air mendidih dan sedikit garam untuk menjaga warna dan tekstur sayuran.</p>
-    </a>
-
-    <a href="goreng.html" class="block bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 group no-underline guide-card staggered-card">
-      <h3 class="text-xl font-semibold text-[#803f22] group-hover:text-orange-500 transition mb-2">5. Menggoreng Tanpa Minyak Berlebih</h3>
-      <p class="text-sm text-gray-700">Pastikan minyak cukup panas sebelum menggoreng agar bahan tidak menyerap minyak berlebihan.</p>
-    </a>
-
-    <a href="baking.html" class="block bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 group no-underline guide-card staggered-card">
-      <h3 class="text-xl font-semibold text-[#803f22] group-hover:text-orange-500 transition mb-2">6. Memanggang makanan dengan benar</h3>
-      <p class="text-sm text-gray-700">Memanggang dengan menggunakan suhu derajat yang tepat</p>
-    </a>
-
-    <a href="clean.html" class="block bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 group no-underline guide-card staggered-card">
-      <h3 class="text-xl font-semibold text-[#803f22] group-hover:text-orange-500 transition mb-2">7. Menjaga kebersihan dalam memasak</h3>
-      <p class="text-sm text-gray-700">Kebersihan merupakan salah satu hal yang sangat penting dalam memasak</p>
-    </a>
+  <section class="container mx-auto px-4 py-10 max-w-4xl">
+    <div class="bg-white rounded shadow p-6 relative">
+      <h2 class="text-4xl font-bold text-[#803f22] mb-6">🧼 Kebersihan dalam Memasak</h2>
+      <p class="text-lg text-gray-700 mb-4">
+        Menjaga kebersihan saat memasak adalah hal penting untuk mencegah kontaminasi makanan dan penyakit yang ditularkan melalui makanan. Kebersihan yang baik juga memastikan rasa makanan tetap optimal.
+      </p>
+      
+      <h3 class="text-2xl font-semibold text-[#803f22] mb-3 mt-8">Panduan Kebersihan Dasar:</h3>
+      <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+        <li><strong>Cuci tangan</strong> dengan sabun selama 20 detik sebelum dan sesudah memegang makanan mentah</li>
+        <li>Gunakan <strong>talenan berbeda</strong> untuk daging mentah dan sayuran</li>
+        <li>Bersihkan permukaan dapur dengan <strong>disinfektan</strong> secara rutin</li>
+        <li>Ganti <strong>spons cuci piring</strong> secara berkala (setiap 2 minggu)</li>
+        <li>Simpan makanan dengan <strong>wadah tertutup</strong> di kulkas</li>
+      </ul>
+      
+      <div class="grid md:grid-cols-2 gap-6 my-8">
+        <div class="bg-[#fff5f0] p-4 rounded-lg border border-orange-200">
+          <h4 class="text-xl font-semibold text-[#803f22] mb-3 flex items-center">
+            <i class="fas fa-check-circle text-orange-500 mr-2"></i> Yang Harus Dilakukan
+          </h4>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Cuci buah dan sayuran dengan air mengalir</li>
+            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Pisahkan makanan mentah dan matang</li>
+            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Masak makanan pada suhu yang tepat</li>
+            <li class="flex items-start"><span class="text-green-500 mr-2">✓</span> Simpan makanan di kulkas ≤4°C</li>
+          </ul>
+        </div>
+        
+        <div class="bg-[#fff5f0] p-4 rounded-lg border border-orange-200">
+          <h4 class="text-xl font-semibold text-[#803f22] mb-3 flex items-center">
+            <i class="fas fa-times-circle text-orange-500 mr-2"></i> Yang Harus Dihindari
+          </h4>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start"><span class="text-red-500 mr-2">✗</span> Mencicipi adonan mentah dengan sendok yang sama</li>
+            <li class="flex items-start"><span class="text-red-500 mr-2">✗</span> Mencairkan makanan di suhu ruang terlalu lama</li>
+            <li class="flex items-start"><span class="text-red-500 mr-2">✗</span> Menggunakan peralatan kotor berulang kali</li>
+            <li class="flex items-start"><span class="text-red-500 mr-2">✗</span> Membiarkan sisa makanan lebih dari 2 jam di suhu ruang</li>
+          </ul>
+        </div>
+      </div>
+      
+      <h3 class="text-2xl font-semibold text-[#803f22] mb-3 mt-8">Pembersihan Peralatan Masak:</h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white border border-gray-200 rounded-lg overflow-hidden">
+          <thead class="bg-[#803f22] text-white">
+            <tr>
+              <th class="py-3 px-4 text-left">Peralatan</th>
+              <th class="py-3 px-4 text-left">Cara Membersihkan</th>
+              <th class="py-3 px-4 text-left">Frekuensi</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+            <tr class="hover:bg-orange-50">
+              <td class="py-3 px-4">Talenan</td>
+              <td class="py-3 px-4">Cuci dengan air panas dan sabun, rendam dengan cuka atau hidrogen peroksida</td>
+              <td class="py-3 px-4">Setiap penggunaan</td>
+            </tr>
+            <tr class="hover:bg-orange-50">
+              <td class="py-3 px-4">Pisau</td>
+              <td class="py-3 px-4">Cuci segera setelah digunakan, keringkan sepenuhnya</td>
+              <td class="py-3 px-4">Setiap penggunaan</td>
+            </tr>
+            <tr class="hover:bg-orange-50">
+              <td class="py-3 px-4">Wajan</td>
+              <td class="py-3 px-4">Bersihkan dengan air panas dan sabun, hindari scrub abrasif</td>
+              <td class="py-3 px-4">Setiap penggunaan</td>
+            </tr>
+            <tr class="hover:bg-orange-50">
+              <td class="py-3 px-4">Kulkas</td>
+              <td class="py-3 px-4">Bersihkan dengan larutan baking soda, buang makanan kadaluarsa</td>
+              <td class="py-3 px-4">Bulanan</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <a href="guide.html" class="inline-block mt-8 px-6 py-2 bg-[#803f22] text-white rounded hover:bg-[#5c2c14] transition">← Kembali ke Panduan Dasar</a>
   </section>
 
   <footer class="bg-gradient-to-b from-[#803f22] to-[#5a2d18] text-white pt-12 pb-8 slide-up delay-5">
@@ -236,12 +198,13 @@
     class="floating-btn fixed bottom-6 right-6 bg-[#fff0e6] hover:bg-[#ffd9c2] text-[#5c2c14] border border-[#c79b7e] px-4 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center space-x-2 z-50">
     <span class="text-lg animate-pulse">🤖</span>
   </a>  
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-  const userData = localStorage.getItem('cookeasyUser');
-  const userMenu = document.getElementById('userMenu');
+    const userData = localStorage.getItem('cookeasyUser');
+    const userMenu = document.getElementById('userMenu');
 
-  if(userData) {
+    if(userData) {
         const user = JSON.parse(userData);
         userMenu.innerHTML = `
           <div class="relative group inline-block text-left">
@@ -252,22 +215,22 @@
             </svg>
           </button>
           <div class="absolute right-0 mt-3 w-40 origin-top-right bg-white border border-gray-200 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 z-50">
-            <a href="profile.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#803f22] transition-colors">My Profile</a>
-            <button id="logoutBtn" class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#803f22] transition-colors">Logout</button>
+            <a href="profile.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#803f22] transition-colors">Profil Saya</a>
+            <button id="logoutBtn" class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[#803f22] transition-colors">Keluar</button>
           </div>
         </div>
         `;
 
-    document.getElementById('logoutBtn').addEventListener('click', function() {
-          const confirmLogout = confirm("Apakah Anda yakin ingin logout?");
-          if (confirmLogout) {
-            localStorage.removeItem('cookeasyUser');
-            location.reload();
-          }
-        });
-  }
-});
-
+      document.getElementById('logoutBtn').addEventListener('click', function() {
+        const confirmLogout = confirm("Apakah Anda yakin ingin logout?");
+        if (confirmLogout) {
+          localStorage.removeItem('cookeasyUser');
+          location.reload();
+        }
+      });
+    }
+  });
 </script>
+
 </body>
 </html>
