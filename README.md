@@ -43,9 +43,9 @@ cookeasy_project/
 │   ├── chefBot.html
 |   └── ...and more
 |
-├── templates/                      # Reusable HTML components
-│   ├── footer.html
-│   └── header.html
+└── templates/                      # Reusable HTML components
+    ├── footer.html
+    └── header.html
 ```
 
 ## 🧑‍🍳 Features
