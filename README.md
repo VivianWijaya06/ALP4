@@ -6,15 +6,46 @@ CookEasy is a web-based application designed to guide users through cooking tech
 
 ```
 cookeasy_project/
-├── index.html                # Homepage
-├── assets/
-│   └── css/                  # Stylesheets for all pages
-│       ├── index.css
-│       ├── guide.css
-│       ├── detailResep.css
-│       ├── frying.css
-│       ├── boiling.css
-│       └── ...and more
+├── index.html                      # Homepage
+├── LICENSE.txt                     # License information
+├── preview.png                     # Project preview image
+├── README.md                       # Project documentation
+├── assets/                         # Static assets
+│   ├── css/                        # Stylesheets
+|   |   ├── ayamGoreng.css
+|   |   ├── baking.css
+|   |   ├── beefWellington.css
+|   |   ├── boiling.css
+|   |   ├── chefBot.css
+|   |   └── ...and more
+|   |
+│   ├── images/                     # Image files
+|   |   ├── ayamGoreng.jpeg
+|   |   ├── ayamJahe.jpeg
+|   |   ├── beefWellington.jpeg
+|   |   ├── chefBot.jpeg
+|   |   ├── favorit.jpeg
+|   |   └── ...and more
+|   |
+|   └── js/                         # JavaScript files (folder shown, but contents not listed)
+|       ├── ayamGoreng.jpeg
+|       ├── ayamJahe.jpeg
+|       ├── beefWellington.jpeg
+|       ├── chefBot.jpeg
+|       ├── favorit.jpeg
+|       └── ...and more
+|
+├── pages/                          # Individual HTML recipe/tutorial pages
+│   ├── ayamGoreng.html
+│   ├── baking.html
+│   ├── beefWellington.html
+│   ├── boiling.html
+│   ├── chefBot.html
+|   └── ...and more
+|
+├── templates/                      # Reusable HTML components
+│   ├── footer.html
+│   └── header.html
 ```
 
 ## 🧑‍🍳 Features
