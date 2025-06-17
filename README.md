@@ -46,7 +46,7 @@ cookeasy_project/
 3. Navigate through the application.
 
 ```bash
-git clone https://github.com/yourusername/cookeasy.git
+git clone https://github.com/VivianWijaya06/ALP4-Frontend.git
 cd cookeasy_project
 open index.html
 ```
