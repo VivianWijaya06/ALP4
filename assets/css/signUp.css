@@ -1,0 +1,23 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+.input-error {
+  border-color: #ef4444 !important;
+}
+.password-strength {
+  height: 4px;
+  background-color: #e5e7eb;
+  margin-top: 8px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.password-strength-fill {
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}

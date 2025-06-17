@@ -1,0 +1,108 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.show {
+  opacity: 1;
+  display: flex;
+}
+
+.modal-content {
+  background-color: #fff9f7;
+  max-width: 28rem;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  transform: translateY(20px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.modal.show .modal-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.input-group {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 38px;
+  cursor: pointer;
+  color: #803f22;
+  transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+  color: #6e3520;
+}
+
+.valid {
+  color: #22c55e;
+  list-style-type: "✓ ";
+}
+
+.invalid {
+  color: #ef4444;
+  list-style-type: "✗ ";
+}
+
+.alert {
+  transition: opacity 0.3s ease;
+}
+
+.profile-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+button,
+input[type="submit"],
+input[type="button"] {
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}

@@ -1,0 +1,9 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+body.chefbot-page nav a[href="/pages/resep.html"] {
+  border-bottom: none !important;
+  color: #803f22 !important;
+  font-weight: normal !important;
+}

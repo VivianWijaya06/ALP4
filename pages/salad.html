@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Salad Segar - CookEasy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/salad.css">
+</head>
+
+<body class="bg-[#fff9f7] text-gray-800">
+
+  <!-- Header Section -->
+  <div id="header"></div>
+
+  <!-- Recipe Details -->
+  <section class="container mx-auto px-4 py-10 max-w-4xl">
+    <div class="bg-white rounded shadow p-6 relative">
+      <img src="../assets/images/salad.jpeg" alt="Salad Segar" class="rounded mb-6 w-full object-cover h-64"/>
+      <div class="absolute top-4 right-4 flex gap-3">
+        <button onclick="openShareModal()" class="bg-white border rounded-full p-2 shadow hover:bg-blue-100">
+          📤
+        </button>
+        <button onclick="toggleSave()" id="saveBtn" class="bg-white border rounded-full p-2 shadow hover:bg-green-100">
+          💾
+        </button>
+      </div>
+
+      <h2 class="text-3xl font-bold text-[#803f22] mb-2">Salad Segar</h2>
+      <div class="flex gap-6 text-sm text-gray-600 mb-6">
+        <span>⏱️ 15 menit</span>
+        <span>⭐ Mudah</span>
+        <span>🍽️ 2 Porsi</span>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-8 mb-6">
+        <div class="md:w-1/2">
+          <h3 class="text-xl font-semibold text-[#803f22] mb-2">Alat-Alat :</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Pisau Dapur Tajam</li>
+            <li>Talenan</li>
+            <li>Salad Spinner</li>
+            <li>Mangkuk Besar</li>
+            <li>Mangkuk Kecil / Jar Kaca</li>
+            <li>Garpu</li>
+            <li>Sendok Salad / Salad Tong </li>
+            <li>Piring Saji atau Mangkuk Salad</li>
+          </ul>
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-xl font-semibold text-[#803f22] mb-2">Bahan-bahan:</h3>
+          <ul class="list-disc list-inside text-gray-700 mb-6">
+            <li>1 kepala selada romaine atau campuran daun salad, cuci bersih dan potong-potong</li>
+            <li>1 buah tomat, potong dadu</li>
+            <li>1/2 buah timun, potong dadu</li>
+            <li>1/4 buah paprika kuning/merah, iris tipis</li>
+            <li>1/4 buah bawang bombay merah kecil, iris tipis (opsional)</li>
+            <li>50 gr daging ayam panggang atau tahu/tempe, potong dadu (opsional, untuk protein)</li>
+          </ul>
+          <h3 class="text-xl font-semibold text-[#803f22] mb-2">Bahan Dressing Lemon-Madu:</h3>
+          <ul class="list-disc list-inside text-gray-700 mb-6">
+            <li>2 sdm minyak zaitun extra virgin</li>
+            <li>1 sdm perasan lemon segar</li>
+            <li>1 sdt madu</li>
+            <li>1/2 siung bawang putih, cincang halus (opsional)</li>
+            <li>Garam dan merica hitam secukupnya</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-semibold text-[#803f22] mb-2">Cara Memasak:</h3>
+      <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-6">
+        <li>Siapkan Sayuran: Dalam mangkuk besar, campurkan selada, tomat, timun, paprika, dan bawang bombay (jika digunakan). Tambahkan protein pilihan Anda jika ada.</li>
+        <li>Buat Dressing: Dalam mangkuk kecil, kocok minyak zaitun, perasan lemon, madu, dan bawang putih cincang (jika digunakan) hingga tercampur rata. Bumbui dengan garam dan merica hitam sesuai selera.</li>
+        <li>Sajikan: Tuangkan dressing ke atas campuran sayuran. Aduk perlahan hingga semua sayuran terlapisi dressing.</li>
+        <li>Segera sajikan salad segar Anda sebagai hidangan pembuka, pendamping, atau hidangan utama yang ringan.</li>
+      </ol>
+
+      <div class="text-sm text-gray-500">Tips: Untuk variasi, tambahkan buah-buahan seperti apel atau stroberi, kacang-kacangan, atau keju feta ke dalam salad Anda. Pastikan sayuran benar-benar kering sebelum diberi dressing agar tidak encer.</div>
+    </div>
+    <a href="/pages/resep.html" class="inline-block mt-8 px-6 py-2 bg-[#803f22] text-white rounded hover:bg-[#5c2c14] transition">← Kembali ke Resep</a>
+  </section>
+
+  <!-- Footer Section -->
+  <div id="footer"></div>
+
+  <!-- ChefBot Floating Button -->
+  <a href="/pages/chefBot.html" 
+    class="floating-btn fixed bottom-6 right-6 bg-[#fff0e6] hover:bg-[#ffd9c2] text-[#5c2c14] border border-[#c79b7e] px-4 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center space-x-2 z-50">
+    <span class="text-lg animate-pulse">🤖</span>
+  </a>  
+
+  <div id="shareModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg p-6 w-80">
+      <h3 class="text-lg font-semibold text-[#803f22] mb-4">Bagikan ke:</h3>
+      <div class="grid gap-3">
+        <a href="#" onclick="shareToWhatsApp()" class="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="#" onclick="shareToFacebook()" class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="#" onclick="shareToInstagram()" class="flex items-center gap-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 transition">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <button onclick="copyLink()" class="flex items-center gap-2 bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">
+          <i class="fas fa-link"></i> Salin Link
+        </button>
+        <button onclick="closeShareModal()" class="block mt-2 text-sm text-gray-500 hover:text-gray-700">
+          Batal
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/salad.js"></script>
+  <script src="../assets/js/header.js"></script>
+</body>
+</html>

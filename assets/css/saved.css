@@ -1,0 +1,48 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff9f7;
+}
+.recipe-card {
+  transition: all 0.3s ease;
+  transform-origin: center;
+  background: linear-gradient(to bottom, white 0%, #fff9f7 100%);
+}
+.recipe-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.remove-btn {
+  transition: all 0.2s ease;
+}
+.remove-btn:hover {
+  transform: scale(1.05);
+}
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.empty-state {
+  background: linear-gradient(135deg, #fff9f7 0%, #ffefe6 100%);
+}
+.floating-btn {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

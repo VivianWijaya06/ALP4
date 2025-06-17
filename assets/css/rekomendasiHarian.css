@@ -1,0 +1,23 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+.music-player {
+  transition: all 0.3s ease;
+}
+.music-player:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.floating-btn {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

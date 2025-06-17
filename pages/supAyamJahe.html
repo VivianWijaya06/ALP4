@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sup Ayam Jahe - CookPedia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/supAyamJahe.css">
+</head>
+
+<body class="bg-[#fff9f7] text-gray-800">
+
+  <!-- Header Section -->
+  <div id="header"></div>
+
+  <section class="container mx-auto px-4 py-10 max-w-4xl">
+    <div class="bg-white rounded shadow p-6 relative">
+      <img src="../assets/images/AyamJahe.jpeg" alt="Sup Ayam Jahe" class="rounded mb-6 w-full object-cover h-64"/>
+      <div class="absolute top-4 right-4 flex gap-3">
+        <button onclick="openShareModal()" class="bg-white border rounded-full p-2 shadow hover:bg-blue-100">📤</button>
+        <button onclick="toggleSave()" id="saveBtn" class="bg-white border rounded-full p-2 shadow hover:bg-green-100">💾</button>
+      </div>
+
+      <h2 class="text-3xl font-bold text-[#803f22] mb-2">Sup Ayam Jahe</h2>
+      <div class="flex gap-6 text-sm text-gray-600 mb-6">
+        <span>⏱️ 45 menit</span>
+        <span>⭐ Sedang</span>
+        <span>🍽️ 4 Porsi</span>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-8 mb-6">
+        <div class="md:w-1/2">
+          <h3 class="text-xl font-semibold text-[#803f22] mb-2">Alat-Alat :</h3>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Panci Sup</li>
+            <li>Wajan Tumis (Opsional)</li>
+            <li>Pisau Tajam</li>
+            <li>Talenan</li>
+            <li>Sendok Sup</li>
+            <li>Saringan Kecil (Opsional)</li>
+            <li>Mangkuk Saji</li>
+            <li>Sendok Kayu atau Silikon</li>
+            <li>Tutup Panci</li>
+          </ul>
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-xl font-semibold text-[#803f22] mb-2">Bahan-bahan:</h3>
+          <ul class="list-disc list-inside text-gray-700 mb-6">
+            <li>500 gr daging ayam (bagian paha/dada), potong dadu</li>
+            <li>1 liter kaldu ayam atau air</li>
+            <li>3 siung bawang putih, memarkan</li>
+            <li>2 ruas jari jahe, memarkan atau iris tipis</li>
+            <li>1 buah wortel, potong dadu</li>
+            <li>100 gr kembang kol, potong per kuntum</li>
+            <li>2 batang seledri, iris kasar</li>
+            <li>1 sdt garam (sesuai selera)</li>
+            <li>1/2 sdt merica bubuk (sesuai selera)</li>
+            <li>Minyak untuk menumis secukupnya</li>
+            <li>Opsional: irisan daun bawang untuk taburan</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="text-xl font-semibold text-[#803f22] mb-2">Cara Memasak:</h3>
+      <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-6">
+        <li>Panaskan sedikit minyak dalam panci. Tumis bawang putih dan jahe hingga harum.</li>
+        <li>Masukkan potongan ayam, aduk hingga berubah warna.</li>
+        <li>Tuang kaldu ayam (atau air), didihkan. Kecilkan api dan masak hingga ayam empuk. Angkat buih yang muncul jika ada.</li>
+        <li>Masukkan wortel dan kembang kol. Masak hingga sayuran empuk.</li>
+        <li>Bumbui dengan garam dan merica bubuk. Aduk rata, koreksi rasa.</li>
+        <li>Masukkan seledri sesaat sebelum diangkat. Aduk sebentar.</li>
+        <li>Angkat dan sajikan sup ayam jahe hangat, taburi dengan irisan daun bawang jika suka.</li>
+      </ol>
+
+      <div class="text-sm text-gray-500">Tips: Untuk rasa kaldu yang lebih kaya, rebus tulang ayam terlebih dahulu atau gunakan ayam bagian paha yang mengandung lebih banyak lemak.</div>
+    </div>
+    <a href="/pages/resep.html" class="inline-block mt-8 px-6 py-2 bg-[#803f22] text-white rounded hover:bg-[#5c2c14] transition">← Kembali ke Resep</a>
+  </section>
+
+  <!-- Footer Section -->
+  <div id="footer"></div>
+
+  <!-- ChefBot Floating Button -->
+  <a href="/pages/chefBot.html" 
+    class="floating-btn fixed bottom-6 right-6 bg-[#fff0e6] hover:bg-[#ffd9c2] text-[#5c2c14] border border-[#c79b7e] px-4 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center space-x-2 z-50">
+    <span class="text-lg animate-pulse">🤖</span>
+  </a>  
+
+  <div id="shareModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg p-6 w-80">
+      <h3 class="text-lg font-semibold text-[#803f22] mb-4">Bagikan ke:</h3>
+      <div class="grid gap-3">
+        <a href="#" onclick="shareToWhatsApp()" class="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="#" onclick="shareToFacebook()" class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="#" onclick="shareToInstagram()" class="flex items-center gap-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 transition">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <button onclick="copyLink()" class="flex items-center gap-2 bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition">
+          <i class="fas fa-link"></i> Salin Link
+        </button>
+        <button onclick="closeShareModal()" class="block mt-2 text-sm text-gray-500 hover:text-gray-700">Batal</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/supAyamJahe.js"></script>
+  <script src="../assets/js/header.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profil - CookEasy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/profile.css">
+</head>
+
+<body class="bg-[#fff9f7] text-gray-800 min-h-screen flex flex-col">
+
+  <!-- Header Section -->
+  <div id="header"></div>
+
+  <!-- Profile Section -->
+  <main class="flex-grow">
+    <div class="container mx-auto px-4 py-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-2xl profile-card p-6 mb-8">
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="w-32 h-32 rounded-full bg-gradient-to-r from-[#ffe1d8] to-[#fff3ec] flex items-center justify-center mb-4 md:mb-0 md:mr-6 transition-all duration-300 hover:from-[#fff3ec] hover:to-[#ffe1d8]">
+              <i class="fas fa-user text-5xl text-[#803f22] transition-transform duration-300 hover:scale-110"></i>
+            </div>
+            <div class="text-center md:text-left flex-1">
+              <h1 id="profileUsername" class="text-2xl font-bold text-[#803f22] transition-colors duration-300">Nama Pengguna</h1>
+              <p id="profileEmail" class="text-gray-600 mb-2 transition-colors duration-300">user@example.com</p>
+            </div>
+            <button onclick="openEditModal()" class="ml-auto hidden md:inline-block bg-[#803f22] text-white px-6 py-2 rounded-lg hover:bg-[#6e3520] transition-all duration-300 active:scale-95 text-center">Edit Profil</button>
+          </div>
+          <button onclick="openEditModal()" class="mt-4 w-full md:hidden bg-[#803f22] text-white px-6 py-2 rounded-lg hover:bg-[#6e3520] transition-all duration-300 active:scale-95 text-center inline-block">Edit Profil</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Edit Profile Modal -->
+  <div id="editProfileModal" class="modal">
+    <div class="modal-content p-6">
+      <div class="flex items-center mb-6">
+        <button onclick="closeEditModal()" class="mr-4 text-[#803f22] hover:text-[#6e3520] transition-colors duration-200">
+          <i class="fas fa-arrow-left text-xl"></i>
+        </button>
+        <h2 class="text-2xl font-bold text-[#803f22]">Edit Profil</h2>
+        <button onclick="closeEditModal()" class="ml-auto text-gray-500 hover:text-gray-700 transition-colors duration-200">
+          <i class="fas fa-times text-xl"></i>
+        </button>
+      </div>
+      
+      <form id="editProfileForm" class="space-y-5">
+        <div>
+          <label for="editUsername" class="block text-gray-700 mb-1 font-medium">Nama Pengguna</label>
+          <input type="text" id="editUsername" name="username" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#803f22] focus:border-transparent transition-all duration-200" required />
+        </div>
+        
+        <div>
+          <label for="editEmail" class="block text-gray-700 mb-1 font-medium">Email</label>
+          <input type="email" id="editEmail" name="email" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#803f22] focus:border-transparent transition-all duration-200" required />
+        </div>
+        
+        <div class="pt-4 border-t border-gray-200">
+          <h3 class="text-lg font-semibold text-[#803f22] mb-3">Ubah Kata Sandi</h3>
+
+          <div class="space-y-4">
+            <div class="input-group">
+              <label for="currentPassword" class="block text-gray-700 mb-1 font-medium">Kata Sandi Saat Ini</label>
+              <input type="password" id="currentPassword" name="currentPassword" placeholder="********" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#803f22] focus:border-transparent pr-10 transition-all duration-200"/>
+              <span class="password-toggle" onclick="togglePassword('currentPassword')">
+                <i class="far fa-eye-slash"></i>
+              </span>
+            </div>
+            
+            <div class="input-group">
+              <label for="newPassword" class="block text-gray-700 mb-1 font-medium">Kata Sandi Baru</label>
+              <input type="password" id="newPassword" name="newPassword" placeholder="********" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#803f22] focus:border-transparent pr-10 transition-all duration-200" />
+              <span class="password-toggle" onclick="togglePassword('newPassword')">
+                <i class="far fa-eye-slash"></i>
+              </span>
+            </div>
+            
+            <div class="input-group">
+              <label for="confirmPassword" class="block text-gray-700 mb-1 font-medium">Konfirmasi Kata Sandi Baru</label>
+              <input type="password" id="confirmPassword" name="confirmPassword" placeholder="********" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#803f22] focus:border-transparent pr-10 transition-all duration-200" />
+              <span class="password-toggle" onclick="togglePassword('confirmPassword')">
+                <i class="far fa-eye-slash"></i>
+              </span>
+            </div>
+          </div>
+          
+          <div class="text-sm text-gray-500 mt-2">
+            <p>Kata sandi harus mengandung:</p>
+            <ul class="list-disc pl-5 space-y-1">
+              <li id="length" class="invalid transition-colors duration-200">Minimal 8 karakter</li>
+              <li id="uppercase" class="invalid transition-colors duration-200">Minimal 1 huruf kapital</li>
+              <li id="number" class="invalid transition-colors duration-200">Minimal 1 angka</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="pt-4">
+          <button type="submit" class="w-full bg-[#803f22] text-white px-5 py-3 rounded-lg hover:bg-[#6e3520] transition-all duration-300 font-medium active:scale-95">Simpan Perubahan</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div id="footer"></div>
+
+  <!-- ChefBot Floating Button -->
+  <a href="/pages/chefBot.html" 
+    class="floating-btn fixed bottom-6 right-6 bg-[#fff0e6] hover:bg-[#ffd9c2] text-[#5c2c14] border border-[#c79b7e] px-4 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center space-x-2 z-50">
+    <span class="text-lg animate-pulse">🤖</span>
+  </a>  
+
+  <script src="../assets/js/profile.js"></script>
+  <script src="../assets/js/header.js"></script>
+</body>
+</html>

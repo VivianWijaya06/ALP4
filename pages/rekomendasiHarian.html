@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Cooking with Music - CookPedia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+
+<body class="bg-[#fff8f3] text-gray-800">
+
+  <!-- Header Section -->
+  <div id="header"></div>
+
+  <div class="container mx-auto px-6 py-4">
+    <a href="../index.html" class="bg-[#803f22] text-white px-4 py-2 rounded-lg hover:bg-[#6a3418] transition-all duration-300 inline-flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+      </svg>
+      Kembali ke Beranda
+    </a>
+  </div>
+
+  <!-- Rekomendasi Masakan Harian -->
+  <section class="container mx-auto px-4 py-8">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-[#803f22] mb-4">Rekomendasi Masakan Harian</h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Temukan inspirasi masakan harian dengan playlist musik yang cocok untuk menemani aktivitas memasak Anda!</p>
+    </div>
+
+    <!-- Rekomendasi Menu -->
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold text-[#803f22] mb-4">Menu Hari Ini</h3>
+          <div class="space-y-6">
+            <a href="/pages/nasiGoreng.html" class="flex items-start hover:bg-gray-50 rounded-lg p-2 -mx-2 transition-all duration-200">
+              <div>
+                <h4 class="font-semibold text-lg">Nasi Goreng Spesial</h4>
+                <p class="text-gray-600 text-sm">Dengan telur mata sapi, ayam suwir, dan kerupuk</p>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  <span class="bg-[#fff4ef] text-[#803f22] px-2 py-1 rounded text-xs">40 menit</span>
+                  <span class="bg-[#fff4ef] text-[#803f22] px-2 py-1 rounded text-xs">Normal</span>
+                  <span class="bg-[#fff4ef] text-[#803f22] px-2 py-1 rounded text-xs">4 porsi</span>
+                </div>
+              </div>
+            </a>
+            <a href="/pages/SupAyamJahe.html" class="flex items-start hover:bg-gray-50 rounded-lg p-2 -mx-2 transition-all duration-200">
+              <div>
+                <h4 class="font-semibold text-lg">Sup Ayam Jahe</h4>
+                <p class="text-gray-600 text-sm">Hangatkan badan dengan kuah kaldu ayam dan jahe segar</p>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  <span class="bg-[#fff4ef] text-[#803f22] px-2 py-1 rounded text-xs">45 menit</span>
+                  <span class="bg-[#fff4ef] text-[#803f22] px-2 py-1 rounded text-xs">Sedang</span>
+                  <span class="bg-[#fff4ef] text-[#803f22] px-2 py-1 rounded text-xs">6 porsi</span>
+                </div>
+              </div>
+            </a>
+            <a href="/pages/salad.html" class="flex items-start hover:bg-gray-50 rounded-lg p-2 -mx-2 transition-all duration-200">
+              <div>
+                <h4 class="font-semibold text-lg">Salad Segar</h4>
+                <p class="text-gray-600 text-sm">Campuran sayuran segar dengan dressing lemon-madu</p>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  <span class="bg-[#fff4ef] text-[#803f22] px-2 py-1 rounded text-xs">15 menit</span>
+                  <span class="bg-[#fff4ef] text-[#803f22] px-2 py-1 rounded text-xs">Mudah</span>
+                  <span class="bg-[#fff4ef] text-[#803f22] px-2 py-1 rounded text-xs">2 porsi</span>
+                </div>
+              </div>
+            </a>
+            <a href="/pages/pancake.html" class="flex items-start hover:bg-gray-50 rounded-lg p-2 -mx-2 transition-all duration-200">
+              <div>
+                <h4 class="font-semibold text-lg">Pancake</h4>
+                <p class="text-gray-600 text-sm">Resep pancake klasik yang lembut dan mengembang</p>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  <span class="bg-[#fff4ef] text-[#803f22] px-2 py-1 rounded text-xs">15 menit</span>
+                  <span class="bg-[#fff4ef] text-[#803f22] px-2 py-1 rounded text-xs">Mudah</span>
+                  <span class="bg-[#fff4ef] text-[#803f22] px-2 py-1 rounded text-xs">2 porsi</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <a href="/pages/resep.html" class="mt-6 bg-[#803f22] text-white px-6 py-2 rounded-lg hover:bg-[#6a3418] transition w-full inline-block text-center">
+            Selengkapnya
+          </a>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden music-player">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold text-[#803f22] mb-4">Playlist Memasak</h3>
+          <p class="text-gray-600 mb-6">Putar musik berikut untuk menemani waktu memasak Anda</p>
+          <div class="bg-gray-50 rounded-lg p-4 mb-4">
+            <div class="flex items-center mb-3">
+              <img src="https://img.icons8.com/color/48/000000/spotify.png" alt="Spotify" class="w-10 h-10 mr-3">
+              <div>
+                <h4 class="font-medium">Jazz for Cooking</h4>
+                <p class="text-gray-500 text-sm">Lagu jazz santai untuk memasak</p>
+              </div>
+            </div>
+            <audio controls class="w-full mt-2">
+              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+              Browser Anda tidak mendukung elemen audio.
+            </audio>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-4 mb-4">
+            <div class="flex items-center mb-3">
+              <img src="https://img.icons8.com/color/48/000000/youtube-music.png" alt="YouTube Music" class="w-10 h-10 mr-3">
+              <div>
+                <h4 class="font-medium">Indonesian Traditional</h4>
+                <p class="text-gray-500 text-sm">Lagu daerah Indonesia</p>
+              </div>
+            </div>
+            <audio controls class="w-full mt-2">
+              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+              Browser Anda tidak mendukung elemen audio.
+            </audio>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-4 mb-6">
+            <div class="flex items-center mb-3">
+              <img src="https://img.icons8.com/color/48/000000/apple-music.png" alt="Apple Music" class="w-10 h-10 mr-3">
+              <div>
+                <h4 class="font-medium">Classical Relax</h4>
+                <p class="text-gray-500 text-sm">Musik klasik untuk konsentrasi</p>
+              </div>
+            </div>
+            <audio controls class="w-full mt-2">
+              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+              Browser Anda tidak mendukung elemen audio.
+            </audio>
+          </div>
+          <div class="text-center">
+            <a href="https://open.spotify.com/search" target="_blank" 
+               class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full transition-all duration-300 inline-flex items-center justify-center">
+              <i class="fab fa-spotify text-xl mr-2"></i>
+              Cari Lagu di Spotify
+            </a>
+            <p class="text-gray-500 text-sm mt-2">Temukan lebih banyak lagu untuk memasak</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow-lg p-6 mb-12">
+      <h3 class="text-2xl font-semibold text-[#803f22] mb-4">Tips Memasak dengan Musik</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-[#fff4ef] p-4 rounded-lg">
+          <h4 class="font-semibold text-[#803f22] mb-2">1. Pilih Tempo yang Sesuai</h4>
+          <p class="text-gray-600 text-sm">Musik dengan tempo sedang (90-120 BPM) ideal untuk memasak karena tidak terlalu cepat atau lambat.</p>
+        </div>
+        <div class="bg-[#fff4ef] p-4 rounded-lg">
+          <h4 class="font-semibold text-[#803f22] mb-2">2. Volume Optimal</h4>
+          <p class="text-gray-600 text-sm">Jaga volume musik cukup untuk didengar tapi tidak mengganggu konsentrasi atau komunikasi.</p>
+        </div>
+        <div class="bg-[#fff4ef] p-4 rounded-lg">
+          <h4 class="font-semibold text-[#803f22] mb-2">3. Variasi Genre</h4>
+          <p class="text-gray-600 text-sm">Coba berbagai genre musik untuk menemukan yang paling cocok dengan mood memasak Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <div id="footer"></div>
+
+  <!-- ChefBot Floating Button -->
+  <a href="/pages/chefBot.html" 
+    class="floating-btn fixed bottom-6 right-6 bg-[#fff0e6] hover:bg-[#ffd9c2] text-[#5c2c14] border border-[#c79b7e] px-4 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center space-x-2 z-50">
+    <span class="text-lg animate-pulse">🤖</span>
+  </a>  
+
+  <script src="/assets/js/rekomendasiHarian.js"></script>
+  <script src="/assets/js/header.js"></script>
+</body>
+</html>
