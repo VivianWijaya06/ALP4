@@ -53,9 +53,6 @@
     <div class="bg-white rounded shadow p-6 relative">
       <img src="nasgor.jpeg" alt="Nasi Goreng" class="rounded mb-6 w-full object-cover h-64"/>
       <div class="absolute top-4 right-4 flex gap-3">
-        <button id="ttsBtn" class="bg-white border rounded-full p-2 shadow hover:bg-purple-100">
-          🔊
-        </button>
         <button onclick="openShareModal()" class="bg-white border rounded-full p-2 shadow hover:bg-blue-100">
           📤
         </button>
@@ -188,52 +185,6 @@
   </a>  
 
   <script>
-    const ttsBtn = document.getElementById('ttsBtn');
-    let isSpeaking = false;
-    let speechSynthesis = window.speechSynthesis;
-    
-    ttsBtn.addEventListener('click', toggleSpeech);
-
-    function toggleSpeech() {
-      if (isSpeaking) {
-        stopSpeech();
-      } else {
-        startSpeech();
-      }
-    }
-
-    function startSpeech() {
-      isSpeaking = true;
-      ttsBtn.innerHTML = '⏹️';
-      ttsBtn.classList.add('bg-purple-200');
-
-      const title = "Resep: " + document.querySelector('h2').textContent;
-      const timeInfo = "Waktu: " + document.querySelector('.flex.gap-6').textContent;
-      const tools = "Alat-alat: " + document.querySelector('h3:nth-of-type(1)').nextElementSibling.textContent;
-      const ingredients = "Bahan-bahan: " + document.querySelector('h3:nth-of-type(2)').nextElementSibling.textContent;
-      const steps = "Cara membuat: " + document.querySelector('h3:nth-of-type(3)').nextElementSibling.textContent;
-      const tips = "Tips: " + document.querySelector('.text-sm.text-gray-500').textContent;
-      const fullText = [title, timeInfo, tools, ingredients, steps, tips].join('. ');
-      const utterance = new SpeechSynthesisUtterance(fullText);
-      utterance.lang = 'id-ID'; 
-      utterance.rate = 0.9; 
-    
-      utterance.onend = function() {
-        isSpeaking = false;
-        ttsBtn.innerHTML = '🔊';
-        ttsBtn.classList.remove('bg-purple-200');
-      };
-
-      speechSynthesis.speak(utterance);
-    }
-
-    function stopSpeech() {
-      speechSynthesis.cancel();
-      isSpeaking = false;
-      ttsBtn.innerHTML = '🔊';
-      ttsBtn.classList.remove('bg-purple-200');
-    }
-
     document.addEventListener('DOMContentLoaded', function() {
     const userData = localStorage.getItem('cookeasyUser');
     const userMenu = document.getElementById('userMenu');
