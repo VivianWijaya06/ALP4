@@ -96,7 +96,7 @@ document.getElementById("recipeForm").addEventListener("submit", function (e) {
 
   saveRecipe(recipeData);
 
-  window.location.href = "recipe.html";
+  window.location.href = "/pages/resep.html";
 });
 
 function saveRecipe(recipeData) {
@@ -171,7 +171,7 @@ document.getElementById("recipeForm").addEventListener("submit", function (e) {
   saveRecipe(recipeData);
 
   setTimeout(() => {
-    window.location.href = "recipe.html";
+    window.location.href = "/pages/resep.html";
   }, 1000);
 });
 

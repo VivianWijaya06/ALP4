@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
       );
 
-      window.location.href = "index.html";
+      window.location.href = "../index.html";
     } catch (error) {
       alert("Login gagal: Email atau password salah");
     } finally {
@@ -116,6 +116,6 @@ function socialLogin(provider) {
   );
 
   setTimeout(() => {
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
   }, 1000);
 }

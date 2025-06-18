@@ -15,6 +15,6 @@ document.getElementById("resetForm").addEventListener("submit", function (e) {
     error.textContent = "";
     email.classList.remove("border-red-500");
     alert("Tautan reset kata sandi telah dikirim ke email Anda (simulasi).");
-    window.location.href = "signin.html";
+    window.location.href = "/pages/signin.html";
   }
 });

@@ -4,8 +4,8 @@ function selectLevel(level) {
   localStorage.setItem("cookeasyUser", JSON.stringify(userData));
 
   if (level === "beginner") {
-    window.location.href = "guide.html";
+    window.location.href = "/pages/guide.html";
   } else {
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
   }
 }
