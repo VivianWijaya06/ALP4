@@ -23,6 +23,26 @@ function openEditModal() {
 function closeEditModal() {
   const modal = document.getElementById("editProfileModal");
   modal.classList.remove("show");
+
+  // Reset password fields
+  const passwordFields = ["currentPassword", "newPassword", "confirmPassword"];
+  passwordFields.forEach(id => {
+    const input = document.getElementById(id);
+    if (!input) return;
+
+    // Force input type to password
+    input.type = "password";
+
+    // Reset the icon to fa-eye-slash
+    const icon = input.nextElementSibling?.querySelector("i");
+    if (icon) {
+      icon.classList.remove("fa-eye");
+      icon.classList.add("fa-eye-slash");
+    }
+
+    // Optionally clear values (remove if you want to retain text)
+    input.value = "";
+  });
 }
 
 window.onclick = function (event) {
@@ -124,6 +144,11 @@ document
         return;
       }
 
+      if (currentPassword === newPassword) {
+        showAlert("error", "Password baru tidak boleh sama dengan password saat ini!");
+        return;
+      }
+
       if (userData.password && userData.password !== currentPassword) {
         showAlert("error", "Password saat ini salah!");
         return;
@@ -140,6 +165,11 @@ document
 
       showAlert("success", "Profil berhasil diperbarui!");
       closeEditModal();
+
+      // Clear password fields after successful update
+      document.getElementById("currentPassword").value = "";
+      document.getElementById("newPassword").value = "";
+      document.getElementById("confirmPassword").value = "";
     } catch (error) {
       console.error("Gagal menyimpan data:", error);
       showAlert("error", "Gagal menyimpan perubahan!");

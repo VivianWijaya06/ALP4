@@ -199,7 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
       const userData = {
-        name: nameInput.value.trim(),
+        username: nameInput.value.trim(),
         email: emailInput.value.trim(),
         authMethod: "email",
       };
