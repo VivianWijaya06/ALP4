@@ -1,4 +1,3 @@
-// assets/js/main.js
 async function loadTemplate(templatePath, elementId) {
   try {
     const response = await fetch(templatePath);
