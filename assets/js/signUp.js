@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       localStorage.setItem("cookeasyUser", JSON.stringify(userData));
 
-      window.location.href = "/pages/select-level.html";
+      window.location.href = "/pages/selectLevel.html";
     } catch (error) {
       alert("Pendaftaran gagal: " + (error.message || "Email sudah terdaftar"));
     } finally {
