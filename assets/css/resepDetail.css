@@ -1,8 +1,5 @@
 body {
   font-family: "Poppins", sans-serif;
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
 }
 .floating-btn {
   animation: float 3s ease-in-out infinite;

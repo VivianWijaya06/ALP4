@@ -87,7 +87,7 @@ function loadUserRecipes() {
     };
 
     const recipeCard = document.createElement("a");
-    recipeCard.href = `recipe-detail.html?title=${encodeURIComponent(
+    recipeCard.href = `resepDetail.html?title=${encodeURIComponent(
       recipe.title
     )}`;
     recipeCard.className =

@@ -66,38 +66,38 @@ function removeField(button) {
   }
 }
 
-document.getElementById("recipeForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+// document.getElementById("recipeForm").addEventListener("submit", function (e) {
+//   e.preventDefault();
 
-  const recipeData = {
-    title: document.getElementById("recipeTitle").value.trim(),
-    image:
-      document.getElementById("recipeImage").value.trim() ||
-      "placeholder-recipe.jpg",
-    time: document.getElementById("cookingTime").value,
-    difficulty: document.getElementById("difficulty").value,
-    servings: document.getElementById("servings").value.trim(),
-    description: document.getElementById("recipeDescription").value.trim(),
-    tools: Array.from(document.querySelectorAll('input[name="tools"]'))
-      .map((input) => input.value.trim())
-      .filter(Boolean),
-    ingredients: Array.from(
-      document.querySelectorAll('input[name="ingredients"]')
-    )
-      .map((input) => input.value.trim())
-      .filter(Boolean),
-    steps: Array.from(document.querySelectorAll('textarea[name="steps"]'))
-      .map((textarea) => textarea.value.trim())
-      .filter(Boolean),
-    tips: document.getElementById("recipeTips").value.trim(),
-    createdAt: new Date().toISOString(),
-    isUserRecipe: true,
-  };
+//   const recipeData = {
+//     title: document.getElementById("recipeTitle").value.trim(),
+//     image:
+//       document.getElementById("recipeImage").value.trim() ||
+//       "placeholder-recipe.jpg",
+//     time: document.getElementById("cookingTime").value,
+//     difficulty: document.getElementById("difficulty").value,
+//     servings: document.getElementById("servings").value.trim(),
+//     description: document.getElementById("recipeDescription").value.trim(),
+//     tools: Array.from(document.querySelectorAll('input[name="tools"]'))
+//       .map((input) => input.value.trim())
+//       .filter(Boolean),
+//     ingredients: Array.from(
+//       document.querySelectorAll('input[name="ingredients"]')
+//     )
+//       .map((input) => input.value.trim())
+//       .filter(Boolean),
+//     steps: Array.from(document.querySelectorAll('textarea[name="steps"]'))
+//       .map((textarea) => textarea.value.trim())
+//       .filter(Boolean),
+//     tips: document.getElementById("recipeTips").value.trim(),
+//     createdAt: new Date().toISOString(),
+//     isUserRecipe: true,
+//   };
 
-  saveRecipe(recipeData);
+//   saveRecipe(recipeData);
 
-  window.location.href = "/pages/resep.html";
-});
+//   window.location.href = "/pages/resep.html";
+// });
 
 function saveRecipe(recipeData) {
   let recipes = JSON.parse(localStorage.getItem("userRecipes")) || [];
